@@ -1,0 +1,93 @@
+{
+  "scenarioId": "SCEN-GAS-02",
+  "moduleId": "MOD-GAS-02",
+  "name": "Gas Leak & Confined Space Safety",
+  "version": 1,
+  "stationId": "ARSAFE-CHAMBER-009",
+  "environment": {
+    "site": "Sector 4 Plant",
+    "bay": "Chamber Bay 09",
+    "spatialMeshProfile": "CONFINED_CHAMBER_ENCLOSURE_09",
+    "trackingToleranceCm": 0.5,
+    "confidenceThreshold": 0.90
+  },
+  "arReference": {
+    "type": "VISUAL_MARKER",
+    "code": "ARSAFE-CHAMBER-009",
+    "plane": "HORIZONTAL_FLOOR",
+    "origin": { "x": 0.0, "y": 0.0, "z": 0.0 }
+  },
+  "physicalAnchors": [
+    {
+      "id": "elem-c1",
+      "name": "Confined Space Access Hatch",
+      "type": "ENTRY_EXIT",
+      "position": { "x": 0.0, "y": 0.0, "z": 2.5 }
+    },
+    {
+      "id": "elem-c2",
+      "name": "SCBA Breathing Apparatus Station",
+      "type": "PPE_STATION",
+      "position": { "x": -1.8, "y": 1.2, "z": -1.0 }
+    },
+    {
+      "id": "elem-c3",
+      "name": "Exhaust Ventilation Control Panel",
+      "type": "VENTILATION_SWITCH",
+      "position": { "x": 1.5, "y": 1.0, "z": -1.5 }
+    },
+    {
+      "id": "elem-c4",
+      "name": "Atmospheric Gas Monitor Sensor",
+      "type": "TELEMETRY_SENSOR",
+      "position": { "x": 0.0, "y": 1.4, "z": -2.8 }
+    }
+  ],
+  "virtualHazards": [
+    {
+      "id": "haz-g1",
+      "type": "ATMOSPHERIC_VAPOR_LEAK",
+      "name": "Hydrogen Sulfide (H2S) Leak Source",
+      "relativeToAnchor": "elem-c4",
+      "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+      "lelPercentage": 42,
+      "toxicityPpm": 55
+    },
+    {
+      "id": "haz-g2",
+      "type": "GROUND_SAFETY_PERIMETER",
+      "name": "Toxic Gas Exclusion Perimeter",
+      "relativeToAnchor": "elem-c4",
+      "position": { "x": 0.0, "y": -1.4, "z": 0.0 },
+      "radiusMeters": 3.0,
+      "color": "#FEA619"
+    }
+  ],
+  "deterministicRules": {
+    "passingScore": 80,
+    "maxScore": 100,
+    "weights": {
+      "gasLeakRecognition": 25,
+      "scbaVerification": 25,
+      "ventilationActivation": 25,
+      "evacuationEgress": 25
+    }
+  },
+  "localization": {
+    "en": {
+      "title": "Gas Leak & Confined Space Safety",
+      "directive": "Atmospheric sensors detect toxic gas in Chamber 09. Initiate SCBA protocol and evacuate immediately.",
+      "standoffWarning": "LEL exceeds 40%. Non-intrinsically safe devices must be powered down."
+    },
+    "hi": {
+      "title": "गैस रिसाव और सीमित स्थान सुरक्षा",
+      "directive": "वायुमंडलीय सेंसर कक्ष 09 में जहरीली गैस का पता लगाते हैं। तुरंत एससीबीए प्रोटोकॉल शुरू करें और बाहर निकलें।",
+      "standoffWarning": "एलईएल 40% से अधिक है। तुरंत सुरक्षित क्षेत्र में जाएं।"
+    },
+    "sat": {
+      "title": "ᱜᱮᱥ ᱞᱤᱠ ᱟᱨ ᱥᱚᱝᱠᱤᱨᱱᱚ ᱡᱟᱭᱜᱟ ᱨᱩᱠᱷᱤᱭᱟᱹ",
+      "directive": "ᱪᱮᱢᱵᱚᱨ ᱐᱙ ᱨᱮ ᱵᱤᱥ ᱜᱮᱥ ᱧᱟᱢ ᱟᱠᱟᱱᱟ᱾ ᱞᱚᱜᱚᱱ ᱮᱥ.ᱥᱤ.ᱵᱤ.ᱮ. ᱦᱚᱨᱚᱜ ᱢᱮ ᱟᱨ ᱵᱟᱦᱨᱮ ᱚᱰᱚᱠᱚᱜ ᱢᱮ᱾",
+      "standoffWarning": "ᱜᱮᱥ ᱞᱤᱠ ᱟᱹᱰᱤ ᱵᱟᱹᱲᱛᱤ ᱢᱮᱱᱟᱜᱼᱟ᱾ ᱥᱩᱨᱚᱠᱷᱤᱭᱟᱹ ᱡᱟᱭᱜᱟ ᱛᱮ ᱪᱟᱞᱟᱜ ᱢᱮ᱾"
+    }
+  }
+}

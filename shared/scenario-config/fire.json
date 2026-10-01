@@ -1,0 +1,102 @@
+{
+  "scenarioId": "SCEN-FIRE-01",
+  "moduleId": "MOD-FIRE-01",
+  "name": "Conveyor Fire & Explosion Response",
+  "version": 1,
+  "stationId": "ARSAFE-CONVEYOR-001",
+  "environment": {
+    "site": "Sector 4 Plant",
+    "bay": "Bay ST-04",
+    "spatialMeshProfile": "INDUSTRIAL_CONVEYOR_RIGID_01",
+    "trackingToleranceCm": 0.5,
+    "confidenceThreshold": 0.90
+  },
+  "arReference": {
+    "type": "VISUAL_MARKER",
+    "code": "ARSAFE-CONVEYOR-001",
+    "plane": "HORIZONTAL_FLOOR",
+    "origin": { "x": 0.0, "y": 0.0, "z": 0.0 }
+  },
+  "physicalAnchors": [
+    {
+      "id": "elem-1",
+      "name": "Conveyor Belt Bed & Motor 4B",
+      "type": "PRIMARY_MACHINE",
+      "position": { "x": 0.0, "y": 0.8, "z": -3.4 }
+    },
+    {
+      "id": "elem-2",
+      "name": "Emergency E-Stop Pull-Cord #04",
+      "type": "CUTOFF_TRIGGER",
+      "position": { "x": -1.2, "y": 1.1, "z": -1.5 }
+    },
+    {
+      "id": "elem-3",
+      "name": "Class B CO2 Fire Extinguisher Rig #04",
+      "type": "PHYSICAL_TOOL",
+      "position": { "x": 2.1, "y": 0.9, "z": -2.2 }
+    },
+    {
+      "id": "elem-4",
+      "name": "Emergency Exit Doorway North",
+      "type": "EGRESS_VECTOR",
+      "position": { "x": 4.5, "y": 0.0, "z": 1.2 }
+    }
+  ],
+  "virtualHazards": [
+    {
+      "id": "haz-1",
+      "type": "VOLUMETRIC_FLAME",
+      "name": "Solvent Vapor Flame Core",
+      "relativeToAnchor": "elem-1",
+      "position": { "x": 0.0, "y": 0.25, "z": 0.0 },
+      "intensity": 0.85,
+      "temperatureCelsius": 382
+    },
+    {
+      "id": "haz-2",
+      "type": "DENSE_SMOKE_PLUME",
+      "name": "Toxic Hydrocarbon Smoke",
+      "relativeToAnchor": "elem-1",
+      "position": { "x": 0.0, "y": 1.2, "z": 0.0 },
+      "opacity": 0.75,
+      "heightMeters": 2.4
+    },
+    {
+      "id": "haz-3",
+      "type": "GROUND_SAFETY_PERIMETER",
+      "name": "Thermal Danger Perimeter Ring",
+      "relativeToAnchor": "elem-1",
+      "position": { "x": 0.0, "y": -0.8, "z": 0.0 },
+      "radiusMeters": 2.5,
+      "color": "#BA1A1A"
+    }
+  ],
+  "deterministicRules": {
+    "passingScore": 75,
+    "maxScore": 100,
+    "weights": {
+      "hazardIdentification": 25,
+      "equipmentTargetLock": 25,
+      "egressIdentification": 25,
+      "tacticalResponse": 25
+    }
+  },
+  "localization": {
+    "en": {
+      "title": "Fire & Explosion Response",
+      "directive": "A fire has been detected near the conveyor drive. Identify the hazard and follow emergency procedures.",
+      "standoffWarning": "Maintain minimum 2.5m standoff from volatile solvent flame."
+    },
+    "hi": {
+      "title": "आग और विस्फोट प्रतिक्रिया",
+      "directive": "कन्वेयर ड्राइव के पास आग का पता चला है। खतरे की पहचान करें और आपातकालीन प्रक्रिया का पालन करें।",
+      "standoffWarning": "विलायक की आग से कम से कम 2.5 मीटर की दूरी बनाए रखें।"
+    },
+    "sat": {
+      "title": "ᱥᱮᱸᱜᱮᱞ ᱟᱨ ᱵᱚᱢᱵᱽ ᱨᱮᱥᱯᱚᱱᱥ",
+      "directive": "ᱠᱚᱱᱵᱷᱮᱭᱚᱨ ᱴᱷᱮᱱ ᱥᱮᱸᱜᱮᱞ ᱧᱟᱢ ᱟᱠᱟᱱᱟ᱾ ᱵᱤᱯᱚᱫᱽ ᱪᱤᱱᱦᱟᱹᱣ ᱢᱮ ᱟᱨ ᱥᱩᱨᱚᱠᱷᱤᱭᱟᱹ ᱱᱤᱭᱚᱢ ᱯᱟᱸᱡᱟᱭ ᱢᱮ᱾",
+      "standoffWarning": "ᱥᱮᱸᱜᱮᱞ ᱠᱷᱚᱱ ᱠᱚᱢ ᱠᱷᱚᱱ ᱠᱚᱢ ᱒.᱕ ᱢᱤᱴᱟᱨ ᱥᱟᱺᱜᱤᱧ ᱨᱮ ᱛᱟᱦᱮᱸᱱ ᱢᱮ᱾"
+    }
+  }
+}
