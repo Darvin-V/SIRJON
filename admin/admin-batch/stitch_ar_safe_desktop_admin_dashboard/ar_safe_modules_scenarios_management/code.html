@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#c6c6cd","surface-variant":"#d3e4fe","primary-container":"#131b2e","on-primary-fixed":"#131b2e","surface-container-high":"#dce9ff","on-secondary-container":"#00476e","secondary-container":"#5bb8fe","on-surface":"#0b1c30","on-error-container":"#93000a","on-background":"#0b1c30","surface-container-lowest":"#ffffff","primary-fixed":"#dae2fd","error":"#ba1a1a","surface-dim":"#cbdbf5","tertiary":"#000000","on-primary-fixed-variant":"#3f465c","on-surface-variant":"#45464d","tertiary-container":"#002114","surface-container-low":"#eff4ff","inverse-primary":"#bec6e0","surface-container":"#e5eeff","surface-container-highest":"#d3e4fe","surface-tint":"#565e74","on-secondary-fixed-variant":"#004b73","primary":"#000000","surface-bright":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-tertiary-fixed":"#002114","on-tertiary-container":"#069669","on-secondary":"#ffffff","on-error":"#ffffff","secondary-fixed":"#cce5ff","primary-fixed-dim":"#bec6e0","secondary":"#006398","on-tertiary-fixed-variant":"#005137","outline":"#76777d","on-tertiary":"#ffffff","error-container":"#ffdad6","surface":"#f8f9ff","on-secondary-fixed":"#001d31","on-primary-container":"#7c839b","tertiary-fixed":"#85f8c4","inverse-surface":"#213145","background":"#f8f9ff","tertiary-fixed-dim":"#68dba9","secondary-fixed-dim":"#93ccff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.5rem","margin":"2rem","space-xl":"2rem","space-xs":"0.25rem","space-md":"1rem"},"fontFamily":{"headline-sm":["Inter"],"label-bold":["Inter"],"label-code":["JetBrains Mono"],"metric-dial":["Inter"],"display-hero":["Inter"],"pill-tag":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-eyebrow":["Inter"],"body-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-bold":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"700"}],"label-code":["12px",{"lineHeight":"16px","fontWeight":"600"}],"metric-dial":["28px",{"lineHeight":"32px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-hero":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"pill-tag":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"800"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"title-eyebrow":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">AR-SAFE</span><span class="font-title-eyebrow text-title-eyebrow uppercase text-on-surface-variant font-bold tracking-wider">ADMIN CONSOLE</span></div></div><div class="mt-space-xs flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-DEFAULT"><span class="font-label-code text-label-code text-secondary uppercase">ENV: PRODUCTION</span><span class="font-pill-tag text-pill-tag text-on-tertiary-container bg-tertiary-fixed/30 px-space-xs py-[2px] rounded">v3.4.2</span></div></div><div class="px-space-md py-space-xs"><span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-widest px-space-sm">OPERATIONAL MATRIX</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-surface-container-lowest font-bold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="sites" href="#"><span class="material-symbols-outlined text-[18px]">factory</span><span>Sites</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="training-stations" href="#"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>Training Stations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="modules-and-scenarios" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>Modules &amp; Scenarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="workers" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="training-results" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Training Results</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="certificates" href="#"><span class="material-symbols-outlined text-[18px]">card_membership</span><span>Certificates</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="verification" href="#"><span class="material-symbols-outlined text-[18px]">policy</span><span>Verification</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="configuration" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Configuration</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-code text-label-code text-on-surface uppercase">NODE: ONLINE</span></div><span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-space-xs rounded">0ms RT</span></div><div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant pt-space-xs"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>Shift A</span><span>07:00 - 15:30</span></div></div><div class="flex items-center gap-space-sm pt-space-xs px-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-label-bold text-label-bold text-on-surface truncate">E. Vance</span><span class="font-pill-tag text-pill-tag bg-surface-variant text-on-secondary-container px-1 rounded uppercase">DIR</span></div><span class="font-label-code text-label-code text-on-surface-variant truncate">#ADM-104</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">lock</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-[18px] text-secondary">location_on</span><span class="font-label-bold text-label-bold text-on-surface">Plant Alpha — Sector 04</span><span class="font-body-sm text-body-sm text-on-surface-variant">(Main Refinery)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant font-label-code text-label-code"><span>Operations</span><span class="material-symbols-outlined text-[12px]">chevron_right</span><span class="text-on-surface font-bold">Dashboard</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-DEFAULT"><div class="w-2 h-2 rounded-full bg-on-tertiary-container"></div><span class="font-label-code text-label-code text-on-surface font-bold">SYNC PIPELINE: 100% HEALTHY</span><span class="material-symbols-outlined text-[14px] text-on-tertiary-container">sync_saved_locally</span></div><div class="hidden 2xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-DEFAULT"><span class="font-label-code text-label-code text-on-surface-variant">NODE:</span><span class="font-label-code text-label-code text-secondary font-bold">AR-SYNC-PRD-01</span><span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface font-bold px-1 rounded ml-1">OSHA-1910 COMPLIANT</span></div><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-on-surface-variant">search</span><input class="h-9 pl-9 pr-space-md bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-label-code rounded-lg outline-none w-56 focus:w-72 transition-all focus:bg-surface-container-lowest" placeholder="Search Worker #WK-... or Station" type="text"/></div><button class="relative w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button class="h-9 px-space-md bg-primary-container text-surface-container-lowest hover:bg-inverse-surface rounded-lg font-label-bold text-label-bold flex items-center gap-space-xs transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>Quick Action</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-xl"><div class="flex flex-col w-full pb-space-xl">
+<!-- SCRIPT TO SYNC APP SHELL ACTIVE STATE -->
+<script>
+    (function () {
+      const activeHref = 'modules-and-scenarios';
+      document.querySelectorAll('aside nav a').forEach((link) => {
+        if (link.getAttribute('data-path') === activeHref) {
+          link.className =
+            'flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md bg-primary-container text-surface-container-lowest font-bold transition-colors';
+        } else {
+          link.className =
+            'flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors';
+        }
+      });
+    })();
+  </script>
+<!-- SCREEN LEVEL TOP OPERATIONAL BAR -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md py-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-code text-label-code">
+<span>Operations</span>
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+<span class="text-on-surface font-bold">Modules &amp; Scenarios</span>
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+<span class="text-secondary font-bold">AR Runtime Config</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Modules &amp; AR Scenarios</h1>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded uppercase font-bold">ENV: PROD-SEC4</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/30 text-on-tertiary-container px-2 py-0.5 rounded font-bold">OSHA 1910 / NFPA SPEC COMPLIANT</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-surface-container-low rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span class="font-label-code text-label-code text-on-surface">Central Node: Online</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-bold text-label-bold flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">data_object</span>
+<span>Export Schema JSON</span>
+</button>
+<button class="h-9 px-space-md bg-primary-container hover:bg-inverse-surface text-surface-container-lowest rounded-lg font-label-bold text-label-bold flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>+ New Scenario</span>
+</button>
+</div>
+</div>
+<!-- SYSTEM RELATIONSHIP BANNER (Dataflow Architecture) -->
+<div class="mt-space-xs rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">account_tree</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-eyebrow text-title-eyebrow text-secondary uppercase tracking-widest font-bold">DATAFLOW ARCHITECTURE PIPELINE</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 py-0.5 rounded">STRICT SCHEMA VALIDATION</span>
+<span class="font-pill-tag text-pill-tag bg-secondary-fixed text-on-secondary-container px-1.5 py-0.5 rounded">SQLITE SYNC PAYLOAD READY</span>
+</div>
+<div class="flex items-center flex-wrap gap-x-2 gap-y-1 mt-1 font-label-code text-label-code text-on-surface">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded font-bold">1. Web Admin Config</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">trending_flat</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded font-bold text-secondary">2. JSON Schema Payload</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">trending_flat</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded font-bold">3. Station / Bay Binding</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">trending_flat</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded font-bold text-on-secondary-container">4. Site Manager AR Calibration</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">trending_flat</span>
+<span class="px-1.5 py-0.5 bg-tertiary-fixed/50 text-on-tertiary-container rounded font-bold">5. Worker Mobile AR Training</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end lg:self-center">
+<div class="flex flex-col text-right font-label-code text-label-code">
+<span class="text-on-surface-variant text-[10px]">SYNC PIPELINE ID</span>
+<span class="text-on-surface font-bold">#PK-2024-SCHEMA-491</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" title="Force Pipeline Recheck">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+</div>
+</div>
+<!-- TOP STATS / SUMMARY METRICS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter mt-space-md">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase font-bold tracking-wider">PRIMARY SAFETY MODULES</span>
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">verified</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-dial text-metric-dial text-on-surface">2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">Certified</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span>NFPA 10 &amp; OSHA 1910 Standard</span>
+<span class="text-on-tertiary-container font-bold">100% Shift Ready</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase font-bold tracking-wider">CONFIGURED SCENARIOS</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">layers</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-dial text-metric-dial text-on-surface">6</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-normal">Active Profiles</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span>4 Production Validated</span>
+<span class="text-on-secondary-container font-bold">2 Staged Drafts</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase font-bold tracking-wider">ASSOCIATED STATIONS</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface">view_in_ar</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-dial text-metric-dial text-on-surface">18</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-normal">Physical Bays</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span>Rig West-02, ST-09, ST-04...</span>
+<span class="text-on-tertiary-container font-bold">All Linked</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase font-bold tracking-wider">RULE CHECK ENGINE</span>
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">rule</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-dial text-metric-dial text-on-surface">v3.4.2</span>
+<span class="font-label-code text-label-code text-on-tertiary-container font-bold">Compiled</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span>Zero Schema Conflicts</span>
+<span class="text-on-surface font-bold">Tolerances Locked</span>
+</div>
+</div>
+</div>
+<!-- MODULE SECTION - EXACTLY TWO PRIMARY MODULES -->
+<div class="mt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-widest font-bold">MANDATORY CORE MODULES (2 CERTIFIED ARCHETYPES)</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">Local SQLite Cache Synchronized</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- MODULE 1: Fire & Explosion Response -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-36 h-36 rounded-full bg-error-container/40 pointer-events-none blur-2xl"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Fire &amp; Explosion Response</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-0.5 rounded font-bold">CERTIFIED</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-code text-label-code text-on-surface-variant">
+<span>NFPA 10 / High Hazard Industrial Directive</span>
+<span>•</span>
+<span class="text-on-surface font-bold">v3.4.2 (Production)</span>
+</div>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-error-container text-on-error-container px-2 py-0.5 rounded font-bold uppercase">HAZMAT LEVEL 4</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Comprehensive thermal, flash fire, and combustible vapor explosion emergency suppression training. Simulates rapid containment, standoff distance adherence, and SCBA apparatus deployment under zero-visibility smoke.
+          </p>
+<div class="grid grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-lg font-label-code text-label-code">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">BOUND STATIONS</span>
+<span class="text-on-surface font-bold text-[14px]">8 Stations</span>
+<span class="text-on-surface-variant text-[10px]">Rig West-02, Bay 01...</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">SCENARIOS</span>
+<span class="text-secondary font-bold text-[14px]">3 Active</span>
+<span class="text-on-surface-variant text-[10px]">1 Staged In Review</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">PASS ACCURACY</span>
+<span class="text-on-tertiary-container font-bold text-[14px]">85.4%</span>
+<span class="text-on-surface-variant text-[10px]">N=142 Workers</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md border-t-0">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-code text-label-code">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>Spatial Tolerance: ±5.0cm</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-bold text-label-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Station Bindings</span>
+</button>
+<button class="h-8 px-space-sm bg-primary-container hover:bg-inverse-surface text-surface-container-lowest rounded-lg font-label-bold text-label-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Configure Scenarios</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODULE 2: Gas Leak / Confined Space Safety -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-36 h-36 rounded-full bg-secondary-fixed/40 pointer-events-none blur-2xl"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">masks</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Gas Leak / Confined Space Safety</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-0.5 rounded font-bold">CERTIFIED</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-code text-label-code text-on-surface-variant">
+<span>OSHA 1910.146 Permitted Confined Space</span>
+<span>•</span>
+<span class="text-on-surface font-bold">v3.4.0 (Production)</span>
+</div>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded font-bold uppercase">TOXIC IDLH ZONE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Toxic gas dispersion, oxygen deficiency, and confined industrial vault entry protocols. Validates spatial standoff distance from toxic plume cores, real-time H2S ppm detection speed, and mandatory Lock-Out/Tag-Out (LOTO) sequencing.
+          </p>
+<div class="grid grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-lg font-label-code text-label-code">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">BOUND STATIONS</span>
+<span class="text-on-surface font-bold text-[14px]">10 Stations</span>
+<span class="text-on-surface-variant text-[10px]">Chamber ST-09, ST-04...</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">SCENARIOS</span>
+<span class="text-secondary font-bold text-[14px]">3 Active</span>
+<span class="text-on-surface-variant text-[10px]">1 Staged In Review</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">PASS ACCURACY</span>
+<span class="text-on-tertiary-container font-bold text-[14px]">88.9%</span>
+<span class="text-on-surface-variant text-[10px]">N=210 Workers</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md border-t-0">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-code text-label-code">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>Sensor Refresh: 60Hz AR Kit</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-bold text-label-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Station Bindings</span>
+</button>
+<button class="h-8 px-space-sm bg-primary-container hover:bg-inverse-surface text-surface-container-lowest rounded-lg font-label-bold text-label-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Configure Scenarios</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- WORKSPACE SPLIT: SCENARIO DIRECTORY & DETAILED INSPECTOR DRAWER -->
+<div class="mt-space-lg grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- LEFT PANE: SCENARIO DIRECTORY TABLE (7 cols on XL) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- DIRECTORY CONTROLS & FILTER TABS -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded font-label-bold text-label-bold bg-surface-container-lowest text-on-surface shadow-xs transition-all" id="tab-all" onclick="filterScenarios('all')">All Scenarios (6)</button>
+<button class="px-3 py-1.5 rounded font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-all" id="tab-fire" onclick="filterScenarios('fire')">Fire &amp; Explosion (3)</button>
+<button class="px-3 py-1.5 rounded font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-all" id="tab-gas" onclick="filterScenarios('gas')">Gas &amp; Confined (3)</button>
+<button class="px-3 py-1.5 rounded font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-all" id="tab-draft" onclick="filterScenarios('draft')">Staged Drafts (1)</button>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[16px] text-on-surface-variant">filter_list</span>
+<input class="h-8 pl-8 pr-3 bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-label-code rounded-lg outline-none w-full sm:w-56 focus:w-64 transition-all" id="scenario-search" placeholder="Search scenarios, hazards..." type="text"/>
+</div>
+</div>
+<!-- DIRECTORY LIST / CARDS -->
+<div class="flex flex-col gap-space-sm" id="scenarios-list">
+<!-- ITEM 1 (Active Selected) -->
+<div class="scenario-card p-space-md rounded-xl bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs" id="card-gas-methane" onclick="selectScenario('gas-methane')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">masks</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Methane Pocket &amp; Confined Vault Clearance</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 py-0.5 rounded font-bold">ACTIVE (PROD)</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">Gas Leak / Confined Space Safety • v3.4.2</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">ID: #SCN-1910-G1</span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-xs text-body-sm text-on-surface-variant font-label-code">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface">Stations: Chamber ST-09 (Bay 4B), ST-11</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-error font-bold">H2S Plume (25ppm)</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-bold">Pass: 80% (5 Checks)</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[14px]">spatial_tracking</span>
+                AR Spatial Anchor Calibrated
+              </span>
+<span class="text-secondary font-bold flex items-center gap-1">
+                Inspecting in Editor
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- ITEM 2 -->
+<div class="scenario-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs" id="card-fire-arc" onclick="selectScenario('fire-arc')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Rapid Flash Fire &amp; Combustible Vapor Arc</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 py-0.5 rounded font-bold">ACTIVE (PROD)</span>
+</div>
+<span class="font-label-code text-label-code text-error font-bold">Fire &amp; Explosion Response • v3.4.0</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">ID: #SCN-NFPA-F02</span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-xs text-body-sm text-on-surface-variant font-label-code">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface">Stations: Rig West-02, Burn Bay 01</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-error font-bold">Vapor Arc Sparks</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-bold">Pass: 85% (4 Checks)</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[14px]">spatial_tracking</span>
+                Thermal Zone Boundary Locked
+              </span>
+<span class="text-on-surface-variant flex items-center gap-1 hover:text-on-surface">
+                Click to Inspect
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- ITEM 3 -->
+<div class="scenario-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs" id="card-gas-scba" onclick="selectScenario('gas-scba')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">masks</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">SCBA Tunnel Standoff &amp; Zero-Vis Evacuation</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 py-0.5 rounded font-bold">ACTIVE (PROD)</span>
+</div>
+<span class="font-label-code text-label-code text-secondary font-bold">Gas Leak / Confined Space Safety • v3.3.8</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">ID: #SCN-1910-G03</span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-xs text-body-sm text-on-surface-variant font-label-code">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface">Stations: Chamber ST-04 (Bay 1A)</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-error font-bold">CO Leak 150ppm</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-bold">Pass: 80% (4 Checks)</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Dual Mobile AR Nodes Bound
+              </span>
+<span class="text-on-surface-variant flex items-center gap-1 hover:text-on-surface">
+                Click to Inspect
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- ITEM 4 -->
+<div class="scenario-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs" id="card-fire-caustic" onclick="selectScenario('fire-caustic')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Caustic Chemical Splatter &amp; Acid Scrubbing Failure</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 py-0.5 rounded font-bold">ACTIVE (PROD)</span>
+</div>
+<span class="font-label-code text-label-code text-error font-bold">Fire &amp; Explosion Response • v3.4.1</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">ID: #SCN-NFPA-C04</span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-space-xs text-body-sm text-on-surface-variant font-label-code">
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface">Stations: Bay 03 (Gulf Terminal)</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-error font-bold">Pressurized Acid Mist</span>
+<span class="bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface font-bold">Pass: 80% (5 Checks)</span>
+</div>
+<div class="mt-space-xs pt-space-xs flex items-center justify-between text-body-sm font-label-code text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                EPA Protocol Compliant
+              </span>
+<span class="text-on-surface-variant flex items-center gap-1 hover:text-on-surface">
+                Click to Inspect
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</div>
+</div>
+<!-- STAGED / DRAFT NOTICE STRIP -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between text-on-surface font-label-code text-label-code">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>2 Staged Scenarios awaiting Field Lead Tablet QR signature</span>
+</div>
+<button class="font-label-bold text-label-bold text-secondary hover:underline">Review Queue (2) →</button>
+</div>
+</div>
+<!-- VISUAL SPATIAL CALIBRATION TELEMETRY MAP -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">view_in_ar</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Live AR Spatial Bay Binding Map</span>
+</div>
+<span class="font-label-code text-label-code text-on-tertiary-container font-bold">18 of 18 Bays Calibrated</span>
+</div>
+<!-- Simplified SVG Bay Floorplan Visualization -->
+<div class="relative w-full h-44 bg-surface-container-low rounded-lg p-space-md overflow-hidden flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 600 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Lines -->
+<path d="M0 35H600 M0 70H600 M0 105H600" stroke="#d3e4fe" stroke-dasharray="4 4" stroke-width="1"></path>
+<path d="M100 0V140 M200 0V140 M300 0V140 M400 0V140 M500 0V140" stroke="#d3e4fe" stroke-dasharray="4 4" stroke-width="1"></path>
+<!-- Chamber ST-09 Selected Bay -->
+<rect fill="#5bb8fe" fill-opacity="0.15" height="95" rx="6" stroke="#006398" stroke-width="2" width="130" x="180" y="20"></rect>
+<text fill="#00476e" font-family="JetBrains Mono" font-size="11" font-weight="700" x="190" y="42">BAY 4B: ST-09</text>
+<text fill="#45464d" font-family="Inter" font-size="9" x="190" y="58">4.50m x 6.00m x 2.85m</text>
+<!-- Simulated Toxic Hazard Core in ST-09 -->
+<circle cx="245" cy="80" fill="#ba1a1a" fill-opacity="0.2" r="22" stroke="#ba1a1a" stroke-dasharray="3 3" stroke-width="1.5"></circle>
+<circle cx="245" cy="80" fill="#ba1a1a" r="5"></circle>
+<text fill="#93000a" font-family="JetBrains Mono" font-size="8" font-weight="700" x="255" y="83">H2S PLUME 25PPM</text>
+<!-- Chamber ST-04 Bay -->
+<rect fill="#eff4ff" height="95" rx="6" stroke="#c6c6cd" stroke-width="1.5" width="110" x="330" y="20"></rect>
+<text fill="#0b1c30" font-family="JetBrains Mono" font-size="11" font-weight="600" x="340" y="42">BAY 1A: ST-04</text>
+<text fill="#45464d" font-family="Inter" font-size="9" x="340" y="58">3.80m x 5.20m</text>
+<circle cx="385" cy="80" fill="#006398" fill-opacity="0.1" r="14" stroke="#006398" stroke-width="1"></circle>
+<!-- Burn Bay 01 -->
+<rect fill="#eff4ff" height="95" rx="6" stroke="#c6c6cd" stroke-width="1.5" width="120" x="460" y="20"></rect>
+<text fill="#0b1c30" font-family="JetBrains Mono" font-size="11" font-weight="600" x="470" y="42">BURN BAY 01</text>
+<circle cx="520" cy="75" fill="#ba1a1a" fill-opacity="0.15" r="18" stroke="#ba1a1a" stroke-width="1"></circle>
+<text fill="#45464d" font-family="Inter" font-size="8" x="470" y="105">THERMAL RIG ACTIVE</text>
+<!-- West Rig Bay -->
+<rect fill="#eff4ff" height="95" rx="6" stroke="#c6c6cd" stroke-width="1.5" width="140" x="20" y="20"></rect>
+<text fill="#0b1c30" font-family="JetBrains Mono" font-size="11" font-weight="600" x="30" y="42">RIG WEST-02</text>
+<text fill="#45464d" font-family="Inter" font-size="9" x="30" y="58">NFPA Flash Burn Spec</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-body-sm font-label-code text-on-surface-variant px-1">
+<span>Active Viewport: Refinery Vault Sector 04</span>
+<span class="text-secondary font-bold">Selected: Chamber ST-09 (Bay 4B)</span>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: DETAILED SCENARIO CONFIGURATION INSPECTOR DRAWER (5 cols on XL) -->
+<div class="xl:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-space-lg">
+<!-- DRAWER HEADER -->
+<div class="flex flex-col gap-space-xs pb-space-sm border-b border-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-title-eyebrow text-title-eyebrow text-secondary uppercase tracking-widest font-bold">SCENARIO CONFIGURATION INSPECTOR</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-0.5 rounded font-bold uppercase">ACTIVE - DEPLOYED</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface" id="inspector-title">Methane Pocket &amp; Confined Vault Clearance</h2>
+<div class="flex items-center gap-space-sm font-label-code text-label-code text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container rounded text-on-secondary-container font-bold" id="inspector-module-badge">Gas Leak / Confined Space Safety</span>
+<span>•</span>
+<span id="inspector-ver">v3.4.2</span>
+<span>•</span>
+<span>Schema ID: <strong class="text-on-surface">#OSHA-1910-G1910</strong></span>
+</div>
+</div>
+<!-- SECTION 1: IDENTITY & SPATIAL PARAMETERS -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">1. SCENARIO PARAMETERS &amp; BAY BINDING</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm font-label-code text-label-code">
+<div class="flex flex-col p-2.5 bg-surface-container-low rounded-lg">
+<span class="text-on-surface-variant text-[11px]">SPATIAL BOUNDARY BINDING</span>
+<span class="text-on-surface font-bold text-[13px]">Chamber ST-09</span>
+<span class="text-secondary text-[10px]">4.50m × 6.00m × 2.85m</span>
+</div>
+<div class="flex flex-col p-2.5 bg-surface-container-low rounded-lg">
+<span class="text-on-surface-variant text-[11px]">PASS THRESHOLD</span>
+<span class="text-on-tertiary-container font-bold text-[13px]">80% (Mandatory)</span>
+<span class="text-on-surface-variant text-[10px]">Min 4 of 5 Rules</span>
+</div>
+<div class="flex flex-col p-2.5 bg-surface-container-low rounded-lg">
+<span class="text-on-surface-variant text-[11px]">MAX PERMITTED DURATION</span>
+<span class="text-on-surface font-bold text-[13px]">180 Seconds</span>
+<span class="text-on-surface-variant text-[10px]">Hard Time Cutoff</span>
+</div>
+<div class="flex flex-col p-2.5 bg-surface-container-low rounded-lg">
+<span class="text-on-surface-variant text-[11px]">TARGET HAZARD CLASS</span>
+<span class="text-error font-bold text-[13px]">Toxic / Asphyxiation</span>
+<span class="text-on-surface-variant text-[10px]">IDLH Class 1 Div 1</span>
+</div>
+</div>
+</div>
+<!-- SECTION 2: HAZARDS & DANGER ZONES -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+<span class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">2. CONFIGURED HAZARDS &amp; DANGER ZONES</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-error-container text-on-error-container px-1.5 py-0.5 rounded font-bold">3 CORES</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- Hazard 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<div class="flex flex-col font-label-code text-label-code">
+<span class="text-on-surface font-bold">Hydrogen Sulfide (H2S) Plume Core</span>
+<span class="text-on-surface-variant text-[11px]">Concentration: 25 ppm | Dispersion Radius: 1.80m</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-error-container text-on-error-container px-2 py-0.5 rounded font-bold">FATAL CORE</span>
+</div>
+<!-- Hazard 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex flex-col font-label-code text-label-code">
+<span class="text-on-surface font-bold">Methane Pocket (Ceiling Accumulation)</span>
+<span class="text-on-surface-variant text-[11px]">LEL 12% at Apex 2.60m | Flash Risk</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded font-bold">EXPLOSION</span>
+</div>
+<!-- Hazard 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div class="flex flex-col font-label-code text-label-code">
+<span class="text-on-surface font-bold">Confined Entry Chokepoint</span>
+<span class="text-on-surface-variant text-[11px]">Access Hatch 0.85m width | Restricted Egress</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">BOTTLENECK</span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: OPERATIONAL INSTRUCTIONS & WORKER DIRECTIVE -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">assignment</span>
+<span class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">3. OPERATIONAL DIRECTIVE (WORKER HUD)</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface leading-relaxed">
+          “Verify multi-gas detector calibration prior to threshold entry. Maintain mandatory 1.5m spatial buffer from simulated volatile pipe flange. Locate lock-out isolation valve within 45 seconds of audible leak onset.”
+        </div>
+</div>
+<!-- SECTION 4: REQUIRED WORKER ACTIONS -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">checklist</span>
+<span class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">4. REQUIRED WORKER ACTIONS</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">Sequential Logic</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 font-label-code text-label-code">
+<div class="p-2 bg-surface-container-low rounded flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface font-bold flex items-center justify-center text-[10px]">A1</span>
+<span class="text-on-surface text-[12px] truncate">Atmospheric Sniff Sampling</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface font-bold flex items-center justify-center text-[10px]">A2</span>
+<span class="text-on-surface text-[12px] truncate">1.5m Spatial Buffer Hold</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface font-bold flex items-center justify-center text-[10px]">A3</span>
+<span class="text-on-surface text-[12px] truncate">LOTO Valve Engagement</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface font-bold flex items-center justify-center text-[10px]">A4</span>
+<span class="text-on-surface text-[12px] truncate">Emergency Alarm Signal</span>
+</div>
+</div>
+</div>
+<!-- SECTION 5: ASSESSMENT RULES ENGINE (SPATIAL & TEMPORAL CHECKS) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified_user</span>
+<span class="font-label-bold text-label-bold text-on-surface uppercase tracking-wider">5. ASSESSMENT RULES ENGINE (100 PTS TOTAL)</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-0.5 rounded font-bold">5 CHECKS</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- Rule 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed/40 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+</div>
+<div class="flex flex-col font-label-code text-label-code">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-bold">Hazard Detection Speed</span>
+<span class="text-on-surface-variant text-[11px]">(Temporal)</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Formula: Reaction Time ≤ 8.2s</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">25 PTS</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check</span>
+</div>
+</div>
+<!-- Rule 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed/40 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">spatial_audio_off</span>
+</div>
+<div class="flex flex-col font-label-code text-label-code">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-bold">SCBA Standoff Clearance</span>
+<span class="text-secondary text-[11px] font-bold">(Spatial AR)</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Formula: Min Distance ≥ 1.50m from Flange</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">25 PTS</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check</span>
+</div>
+</div>
+<!-- Rule 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed/40 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+</div>
+<div class="flex flex-col font-label-code text-label-code">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-bold">Pre-Entry Ventilation Verification</span>
+<span class="text-on-surface-variant text-[11px]">(Procedural)</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Blower CFM Active Check Confirmed</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">20 PTS</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check</span>
+</div>
+</div>
+<!-- Rule 4 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed/40 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+<div class="flex flex-col font-label-code text-label-code">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-bold">LOTO Tag Sequence Adherence</span>
+<span class="text-on-surface-variant text-[11px]">(Procedural)</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">3 Isolation Steps executed in order</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">15 PTS</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check</span>
+</div>
+</div>
+<!-- Rule 5 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed/40 text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">directions_run</span>
+</div>
+<div class="flex flex-col font-label-code text-label-code">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-bold">Egress Path Adherence</span>
+<span class="text-secondary text-[11px] font-bold">(Spatial AR)</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Corridor cleared within 30s without collision</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-bold">15 PTS</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ACTION FOOTER BAR -->
+<div class="pt-space-md border-t border-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="flex-1 h-10 px-space-md bg-primary-container hover:bg-inverse-surface text-surface-container-lowest rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Push Config to Central Node</span>
+</button>
+<button class="h-10 px-space-md bg-secondary hover:bg-on-secondary-container text-on-secondary rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">phone_android</span>
+<span>Deploy Payload to Mobile</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">code</span>
+<span>Edit Scenario JSON</span>
+</button>
+<button class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Duplicate Scenario</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- INLINE CLIENT SCRIPT FOR INTERACTIVE DIRECTORY FILTERING & SELECTION -->
+<script>
+    function filterScenarios(category) {
+      const tabs = ['tab-all', 'tab-fire', 'tab-gas', 'tab-draft'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(t);
+        if (btn) {
+          if (t === 'tab-' + category) {
+            btn.className = 'px-3 py-1.5 rounded font-label-bold text-label-bold bg-surface-container-lowest text-on-surface shadow-xs transition-all';
+          } else {
+            btn.className = 'px-3 py-1.5 rounded font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-all';
+          }
+        }
+      });
+
+      const cardMethane = document.getElementById('card-gas-methane');
+      const cardFire = document.getElementById('card-fire-arc');
+      const cardSCBA = document.getElementById('card-gas-scba');
+      const cardCaustic = document.getElementById('card-fire-caustic');
+
+      if (category === 'all') {
+        cardMethane.style.display = 'flex';
+        cardFire.style.display = 'flex';
+        cardSCBA.style.display = 'flex';
+        cardCaustic.style.display = 'flex';
+      } else if (category === 'fire') {
+        cardMethane.style.display = 'none';
+        cardFire.style.display = 'flex';
+        cardSCBA.style.display = 'none';
+        cardCaustic.style.display = 'flex';
+      } else if (category === 'gas') {
+        cardMethane.style.display = 'flex';
+        cardFire.style.display = 'none';
+        cardSCBA.style.display = 'flex';
+        cardCaustic.style.display = 'none';
+      } else if (category === 'draft') {
+        cardMethane.style.display = 'none';
+        cardFire.style.display = 'none';
+        cardSCBA.style.display = 'none';
+        cardCaustic.style.display = 'flex';
+      }
+    }
+
+    function selectScenario(id) {
+      const cards = document.querySelectorAll('.scenario-card');
+      cards.forEach(c => {
+        c.className = 'scenario-card p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs';
+      });
+      const target = document.getElementById('card-' + id);
+      if (target) {
+        target.className = 'scenario-card p-space-md rounded-xl bg-surface-container cursor-pointer transition-all flex flex-col gap-space-xs';
+      }
+
+      if (id === 'fire-arc') {
+        document.getElementById('inspector-title').innerText = 'Rapid Flash Fire & Combustible Vapor Arc';
+        document.getElementById('inspector-module-badge').innerText = 'Fire & Explosion Response';
+        document.getElementById('inspector-module-badge').className = 'px-2 py-0.5 bg-error-container rounded text-on-error-container font-bold';
+        document.getElementById('inspector-ver').innerText = 'v3.4.0';
+      } else if (id === 'gas-methane') {
+        document.getElementById('inspector-title').innerText = 'Methane Pocket & Confined Vault Clearance';
+        document.getElementById('inspector-module-badge').innerText = 'Gas Leak / Confined Space Safety';
+        document.getElementById('inspector-module-badge').className = 'px-2 py-0.5 bg-surface-container rounded text-on-secondary-container font-bold';
+        document.getElementById('inspector-ver').innerText = 'v3.4.2';
+      }
+    }
+
+    document.getElementById('scenario-search')?.addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('.scenario-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</div></main></div></body></html>

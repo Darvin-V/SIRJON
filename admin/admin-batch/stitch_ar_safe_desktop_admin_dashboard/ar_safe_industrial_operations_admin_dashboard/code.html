@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#c6c6cd","surface-variant":"#d3e4fe","primary-container":"#131b2e","on-primary-fixed":"#131b2e","surface-container-high":"#dce9ff","on-secondary-container":"#00476e","secondary-container":"#5bb8fe","on-surface":"#0b1c30","on-error-container":"#93000a","on-background":"#0b1c30","surface-container-lowest":"#ffffff","primary-fixed":"#dae2fd","error":"#ba1a1a","surface-dim":"#cbdbf5","tertiary":"#000000","on-primary-fixed-variant":"#3f465c","on-surface-variant":"#45464d","tertiary-container":"#002114","surface-container-low":"#eff4ff","inverse-primary":"#bec6e0","surface-container":"#e5eeff","surface-container-highest":"#d3e4fe","surface-tint":"#565e74","on-secondary-fixed-variant":"#004b73","primary":"#000000","surface-bright":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-tertiary-fixed":"#002114","on-tertiary-container":"#069669","on-secondary":"#ffffff","on-error":"#ffffff","secondary-fixed":"#cce5ff","primary-fixed-dim":"#bec6e0","secondary":"#006398","on-tertiary-fixed-variant":"#005137","outline":"#76777d","on-tertiary":"#ffffff","error-container":"#ffdad6","surface":"#f8f9ff","on-secondary-fixed":"#001d31","on-primary-container":"#7c839b","tertiary-fixed":"#85f8c4","inverse-surface":"#213145","background":"#f8f9ff","tertiary-fixed-dim":"#68dba9","secondary-fixed-dim":"#93ccff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.5rem","margin":"2rem","space-xl":"2rem","space-xs":"0.25rem","space-md":"1rem"},"fontFamily":{"headline-sm":["Inter"],"label-bold":["Inter"],"label-code":["JetBrains Mono"],"metric-dial":["Inter"],"display-hero":["Inter"],"pill-tag":["Inter"],"headline-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"title-eyebrow":["Inter"],"body-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-bold":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"700"}],"label-code":["12px",{"lineHeight":"16px","fontWeight":"600"}],"metric-dial":["28px",{"lineHeight":"32px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-hero":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"pill-tag":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"800"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"title-eyebrow":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">AR-SAFE</span><span class="font-title-eyebrow text-title-eyebrow uppercase text-on-surface-variant font-bold tracking-wider">ADMIN CONSOLE</span></div></div><div class="mt-space-xs flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low rounded-DEFAULT"><span class="font-label-code text-label-code text-secondary uppercase">ENV: PRODUCTION</span><span class="font-pill-tag text-pill-tag text-on-tertiary-container bg-tertiary-fixed/30 px-space-xs py-[2px] rounded">v3.4.2</span></div></div><div class="px-space-md py-space-xs"><span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-widest px-space-sm">OPERATIONAL MATRIX</span></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-primary-container text-surface-container-lowest font-bold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-surface-container-lowest font-bold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="sites" href="#"><span class="material-symbols-outlined text-[18px]">factory</span><span>Sites</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="training-stations" href="#"><span class="material-symbols-outlined text-[18px]">view_in_ar</span><span>Training Stations</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="modules-and-scenarios" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>Modules &amp; Scenarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="workers" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Workers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="training-results" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Training Results</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="certificates" href="#"><span class="material-symbols-outlined text-[18px]">card_membership</span><span>Certificates</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="verification" href="#"><span class="material-symbols-outlined text-[18px]">policy</span><span>Verification</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="configuration" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Configuration</span></a></nav></div><div class="p-space-md flex flex-col gap-space-xs bg-surface-container-low"><div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-code text-label-code text-on-surface uppercase">NODE: ONLINE</span></div><span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-space-xs rounded">0ms RT</span></div><div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant pt-space-xs"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span>Shift A</span><span>07:00 - 15:30</span></div></div><div class="flex items-center gap-space-sm pt-space-xs px-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-label-bold text-label-bold text-on-surface truncate">E. Vance</span><span class="font-pill-tag text-pill-tag bg-surface-variant text-on-secondary-container px-1 rounded uppercase">DIR</span></div><span class="font-label-code text-label-code text-on-surface-variant truncate">#ADM-104</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">lock</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg select-none"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-[18px] text-secondary">location_on</span><span class="font-label-bold text-label-bold text-on-surface">Plant Alpha — Sector 04</span><span class="font-body-sm text-body-sm text-on-surface-variant">(Main Refinery)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant font-label-code text-label-code"><span>Operations</span><span class="material-symbols-outlined text-[12px]">chevron_right</span><span class="text-on-surface font-bold">Dashboard</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-DEFAULT"><div class="w-2 h-2 rounded-full bg-on-tertiary-container"></div><span class="font-label-code text-label-code text-on-surface font-bold">SYNC PIPELINE: 100% HEALTHY</span><span class="material-symbols-outlined text-[14px] text-on-tertiary-container">sync_saved_locally</span></div><div class="hidden 2xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-DEFAULT"><span class="font-label-code text-label-code text-on-surface-variant">NODE:</span><span class="font-label-code text-label-code text-secondary font-bold">AR-SYNC-PRD-01</span><span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-surface font-bold px-1 rounded ml-1">OSHA-1910 COMPLIANT</span></div><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-on-surface-variant">search</span><input class="h-9 pl-9 pr-space-md bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-label-code rounded-lg outline-none w-56 focus:w-72 transition-all focus:bg-surface-container-lowest" placeholder="Search Worker #WK-... or Station" type="text"/></div><button class="relative w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button class="h-9 px-space-md bg-primary-container text-surface-container-lowest hover:bg-inverse-surface rounded-lg font-label-bold text-label-bold flex items-center gap-space-xs transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>Quick Action</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-xl"><div class="flex flex-col w-full pb-space-xl">
+<!-- Operational Breadcrumb & Context Banner -->
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant">
+<span class="text-secondary font-bold uppercase tracking-wider">PLANT-ALPHA</span>
+<span>/</span>
+<span class="text-on-surface uppercase tracking-wider">SECTOR-04 REFINERY</span>
+<span>/</span>
+<span class="text-on-tertiary-container bg-tertiary-fixed/30 px-space-xs rounded font-bold">OSHA-1910 ACTIVE DISPATCH</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">AR-Safe Shift Operations &amp; Compliance Matrix</h1>
+<span class="font-label-code text-label-code text-on-surface-variant bg-surface-container-high px-space-xs py-0.5 rounded">REALTIME TELEMETRY</span>
+</div>
+</div>
+<!-- Central Sync State Trigger Bar (Mobile Reference Adapted) -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-1.5 rounded-lg shadow-sm border-0">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-wider px-space-xs hidden sm:inline">SIMULATE PIPELINE:</span>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-DEFAULT">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded font-label-bold text-label-bold bg-secondary/10 text-secondary transition-all" id="btn-syncing">
+<span class="material-symbols-outlined text-[15px] animate-spin">sync</span>
+<span>Syncing</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-all" id="btn-success">
+<span class="material-symbols-outlined text-[15px] text-on-tertiary-container">check_circle</span>
+<span>Success</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded font-label-bold text-label-bold text-on-surface-variant hover:text-on-surface transition-all" id="btn-pending">
+<span class="material-symbols-outlined text-[15px] text-on-secondary-container">sensors</span>
+<span>Pending (3)</span>
+</button>
+</div>
+<button class="h-8 px-space-sm bg-surface-container-high hover:bg-surface-container text-on-surface rounded font-label-code text-label-code flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">refresh</span>
+<span class="hidden md:inline">Re-poll</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: TOP OPERATIONAL METRIC TILES -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Tile 1: Training Sites -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-wider">Industrial Facilities</span>
+<span class="font-metric-dial text-metric-dial text-on-surface mt-1">4 Sites</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl flex items-center justify-between">
+<div class="flex items-center gap-1.5 font-label-code text-label-code text-on-surface">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>2 Active Zones</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-1.5 py-0.5 rounded">1 Calibrating</span>
+</div>
+</div>
+<!-- Tile 2: Active Stations -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-wider">AR Safe Chambers</span>
+<span class="font-metric-dial text-metric-dial text-on-surface mt-1">18 Online</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant">Chamber ST-09, Rig-02 Active</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/30 text-on-tertiary-container px-1.5 py-0.5 rounded">94% LOAD</span>
+</div>
+</div>
+<!-- Tile 3: Registered Workers -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-wider">Field Personnel</span>
+<span class="font-metric-dial text-metric-dial text-on-surface mt-1">342 Workers</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">engineering</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-tertiary-container font-bold">284 Shift Qualified</span>
+<span class="font-label-code text-label-code text-on-error-container bg-error-container/40 px-1.5 py-0.5 rounded font-bold">58 Due Recert</span>
+</div>
+</div>
+<!-- Tile 4: Shift Completions -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase tracking-wider">Shift Completions</span>
+<span class="font-metric-dial text-metric-dial text-on-surface mt-1">1,284 Sessions</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-low/60 -mx-space-md -mb-space-md px-space-md pb-space-sm rounded-b-xl flex items-center justify-between">
+<div class="flex items-center gap-1 font-label-code text-label-code text-on-tertiary-container font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>98.4% Pass Rate</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/30 text-on-tertiary-container px-1.5 py-0.5 rounded">+4.2% MTD</span>
+</div>
+</div>
+</div>
+<!-- SECTION 2: MOBILE-ALIGNED SYNC PIPELINE & OFFLINE BUFFER MONITOR -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Offline SQLite Buffer Notice (Direct mirror of mobile alert box) -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">TRAINING COMPLETED OFFLINE — BUFFER ACTIVE</span>
+<span class="font-pill-tag text-pill-tag bg-surface-container-highest text-on-secondary-container px-2 py-0.5 rounded uppercase">Encrypted SQLite</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Local assessments secured on field headsets. Records like <span class="font-label-code text-label-code text-secondary font-bold">#REC-9844-OF</span> and 2 others are legally certified and queued for central telemetry sync.
+          </p>
+<div class="mt-space-sm flex flex-wrap items-center gap-space-sm">
+<span class="font-label-code text-label-code bg-surface-container-lowest px-2 py-1 rounded text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">lock</span>
+              Package #REC-9844-OF (412 KB / 634 KB)
+            </span>
+<span class="font-label-code text-label-code text-on-surface-variant">Worker: Mark Daniels (WK-4092)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest/70 -mx-space-md -mb-space-md px-space-md py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-code text-label-code text-secondary font-bold">Auto-sync protocol will resume upon WiFi 6 handshake</span>
+</div>
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase">3 QUEUED DISPATCHES</span>
+</div>
+</div>
+<!-- Active Pipeline Telemetry Card -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] animate-spin">sync</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Central Node Handshake Active</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/30 text-on-tertiary-container px-2 py-0.5 rounded">65% STREAMING</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">Node: AR-SYNC-PRD-01 • Ingestion Latency: 24ms • TLS 1.3</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="h-8 px-space-sm bg-primary-container text-surface-container-lowest rounded font-label-bold text-label-bold hover:bg-inverse-surface transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Force Push</span>
+</button>
+</div>
+</div>
+<!-- Live Sync Bar Component -->
+<div class="flex flex-col gap-1.5 mt-space-sm">
+<div class="flex justify-between items-center font-label-code text-label-code">
+<span class="text-on-surface font-semibold">Incoming Shift Manifest (ST-09, West-02, Rig-04)</span>
+<span class="text-secondary font-bold">1,842 KB / 2,834 KB</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 65%;"></div>
+</div>
+<div class="flex justify-between items-center font-label-code text-label-code text-on-surface-variant pt-0.5">
+<span>Cryptographic Hash: SHA-256 Validated</span>
+<span class="text-on-tertiary-container font-bold">OSHA Legal Sign-off Pre-Checked</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: CORE WORKSPACE - 2 COLUMN INDUSTRIAL BENTO -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Left Column: Shift Readiness Chart & Scenario Catalog (8 Cols) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Training Activity & Shift Readiness Graphic -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md pb-space-sm bg-surface-container-low/40 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">stacked_bar_chart</span>
+<span class="font-headline-md text-headline-md text-on-surface">Weekly Shift Readiness &amp; Module Completion</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">OSHA Target compliance quota: 250 certified sessions per day</span>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary-container"></span>
+<span class="text-on-surface">Actual Completions</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-secondary-container"></span>
+<span class="text-on-surface-variant">Mandate Target</span>
+</div>
+</div>
+</div>
+<!-- Custom Telemetry SVG Histogram Chart -->
+<div class="w-full overflow-x-auto">
+<div class="min-w-[500px]">
+<svg class="w-full h-44 text-on-surface overflow-visible" preserveaspectratio="none" viewbox="0 0 700 160">
+<!-- Horizontal Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="3,3" stroke-opacity="0.08" x1="40" x2="680" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="3,3" stroke-opacity="0.08" x1="40" x2="680" y1="60" y2="60"></line>
+<line stroke="currentColor" stroke-dasharray="3,3" stroke-opacity="0.08" x1="40" x2="680" y1="100" y2="100"></line>
+<line stroke="currentColor" stroke-opacity="0.15" x1="40" x2="680" y1="140" y2="140"></line>
+<!-- Y Axis Labels -->
+<text class="fill-current text-on-surface-variant font-label-code" font-size="10" text-anchor="end" x="30" y="24">300</text>
+<text class="fill-current text-on-surface-variant font-label-code" font-size="10" text-anchor="end" x="30" y="64">200</text>
+<text class="fill-current text-on-surface-variant font-label-code" font-size="10" text-anchor="end" x="30" y="104">100</text>
+<text class="fill-current text-on-surface-variant font-label-code" font-size="10" text-anchor="end" x="30" y="144">0</text>
+<!-- Day 1: Mon -->
+<rect fill="#131b2e" height="98" rx="3" width="22" x="75" y="42"></rect>
+<rect fill="#5bb8fe" height="85" opacity="0.6" rx="3" width="22" x="101" y="55"></rect>
+<text class="fill-current text-on-surface font-label-code" font-size="11" text-anchor="middle" x="99" y="155">MON (245)</text>
+<!-- Day 2: Tue -->
+<rect fill="#131b2e" height="108" rx="3" width="22" x="165" y="32"></rect>
+<rect fill="#5bb8fe" height="85" opacity="0.6" rx="3" width="22" x="191" y="55"></rect>
+<text class="fill-current text-on-surface font-label-code" font-size="11" text-anchor="middle" x="189" y="155">TUE (268)</text>
+<!-- Day 3: Wed -->
+<rect fill="#131b2e" height="116" rx="3" width="22" x="255" y="24"></rect>
+<rect fill="#5bb8fe" height="85" opacity="0.6" rx="3" width="22" x="281" y="55"></rect>
+<text class="fill-current text-on-surface font-label-code" font-size="11" text-anchor="middle" x="279" y="155">WED (289)</text>
+<!-- Day 4: Thu -->
+<rect fill="#131b2e" height="102" rx="3" width="22" x="345" y="38"></rect>
+<rect fill="#5bb8fe" height="85" opacity="0.6" rx="3" width="22" x="371" y="55"></rect>
+<text class="fill-current text-on-surface font-label-code" font-size="11" text-anchor="middle" x="369" y="155">THU (252)</text>
+<!-- Day 5: Fri -->
+<rect fill="#131b2e" height="112" rx="3" width="22" x="435" y="28"></rect>
+<rect fill="#5bb8fe" height="85" opacity="0.6" rx="3" width="22" x="461" y="55"></rect>
+<text class="fill-current text-on-surface font-label-code" font-size="11" text-anchor="middle" x="459" y="155">FRI (276)</text>
+<!-- Day 6: Sat -->
+<rect fill="#131b2e" height="62" rx="3" width="22" x="525" y="78"></rect>
+<rect fill="#5bb8fe" height="45" opacity="0.6" rx="3" width="22" x="551" y="95"></rect>
+<text class="fill-current text-on-surface font-label-code" font-size="11" text-anchor="middle" x="549" y="155">SAT (142)</text>
+<!-- Day 7: Sun (Active Today) -->
+<rect fill="#069669" height="80" rx="3" width="22" x="615" y="60"></rect>
+<rect fill="#5bb8fe" height="45" opacity="0.6" rx="3" width="22" x="641" y="95"></rect>
+<text class="fill-current text-on-tertiary-container font-label-code font-bold" font-size="11" text-anchor="middle" x="639" y="155">SUN (198)</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- Module & Scenario Completion Roster -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Spatial AR Module Performance Matrix</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active test scenarios loaded on Chamber ST-09 &amp; Mobile AR rigs</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/30 text-on-tertiary-container px-2 py-1 rounded">80% MINIMUM PASS MANDATE</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Scenario 1: Gas Leak & Confined Space (Direct from Mobile Reference) -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<!-- SVG Radial Mini-Meter (85/100) -->
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-label-bold text-label-bold text-on-surface">85</span>
+<span class="font-title-eyebrow text-[9px] text-on-surface-variant leading-none">/100</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Gas Leak &amp; Confined Space</span>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-1.5 py-0.5 rounded">CHAMBER ST-09</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Industrial OSHA-1910 Spatial Protocol • Methane Pocket Standoff Check</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg self-end md:self-center">
+<div class="flex flex-col text-right font-label-code text-label-code">
+<span class="text-on-surface font-bold">312 Completed</span>
+<span class="text-on-tertiary-container font-semibold">92% Pass Rate</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-on-tertiary-container text-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> PASS
+              </span>
+</div>
+</div>
+<!-- Scenario 2: Fire & Explosion Response -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-label-bold text-label-bold text-on-surface">82</span>
+<span class="font-title-eyebrow text-[9px] text-on-surface-variant leading-none">/100</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fire &amp; Explosion Response</span>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-1.5 py-0.5 rounded">RIG WEST-02</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rapid Suppression Sequence • CO2 Standoff Arc Detection</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg self-end md:self-center">
+<div class="flex flex-col text-right font-label-code text-label-code">
+<span class="text-on-surface font-bold">245 Completed</span>
+<span class="text-on-tertiary-container font-semibold">88% Pass Rate</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-on-tertiary-container text-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> PASS
+              </span>
+</div>
+</div>
+<!-- Scenario 3: SCBA Standoff Protocol & Hazard Clearance -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="91, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-label-bold text-label-bold text-on-surface">91</span>
+<span class="font-title-eyebrow text-[9px] text-on-surface-variant leading-none">/100</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">SCBA Standoff Protocol &amp; Hazard Clearance</span>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-1.5 py-0.5 rounded">CHAMBER ST-04</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Maintained 1.5m Spatial Clearance Distance Under Zero-Vis</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg self-end md:self-center">
+<div class="flex flex-col text-right font-label-code text-label-code">
+<span class="text-on-surface font-bold">189 Completed</span>
+<span class="text-on-tertiary-container font-semibold">96% Pass Rate</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-on-tertiary-container text-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> PASS
+              </span>
+</div>
+</div>
+<!-- Scenario 4: Chemical Neutralization -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-secondary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="79, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-label-bold text-label-bold text-on-surface">79</span>
+<span class="font-title-eyebrow text-[9px] text-on-surface-variant leading-none">/100</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Chemical Neutralization &amp; Splash Entry</span>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-1.5 py-0.5 rounded">MOBILE AR RIG</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">SOP-28 Caustic Washout • Eye-Protection Latch Verification</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg self-end md:self-center">
+<div class="flex flex-col text-right font-label-code text-label-code">
+<span class="text-on-surface font-bold">144 Completed</span>
+<span class="text-on-secondary-container font-semibold">81% Pass Rate</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[13px]">schedule</span> BORDERLINE
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Shift Certificates & Station Telemetry Anchors (4 Cols) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Section: Verified Shift Qualification Certificates -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">card_membership</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Shift Certificates Issued</span>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container text-secondary px-1.5 py-0.5 rounded">TAMPER-PROOF</span>
+</div>
+<!-- Certificate Card 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">#CERT-2024-8812</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 rounded uppercase">LEGAL SIGN-OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-surface-container-lowest font-label-bold text-label-bold">MD</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">Mark Daniels (WK-4092)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Confined Space + Gas Leak</span>
+</div>
+</div>
+<span class="font-label-code text-label-code text-on-tertiary-container font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded">30d Valid</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant pt-1">
+<span>Evaluator: Station ST-09 Auto</span>
+<span>Shift 04-A Validated</span>
+</div>
+</div>
+<!-- Certificate Card 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">#CERT-2024-8811</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 rounded uppercase">LEGAL SIGN-OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-surface-container-lowest font-label-bold text-label-bold">SC</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">Sarah Chen (WK-3810)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Fire &amp; Explosion Response</span>
+</div>
+</div>
+<span class="font-label-code text-label-code text-on-tertiary-container font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded">30d Valid</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant pt-1">
+<span>Evaluator: Rig West-02</span>
+<span>Shift 04-A Validated</span>
+</div>
+</div>
+<!-- Certificate Card 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-secondary font-bold">#CERT-2024-8809</span>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-1.5 rounded uppercase">LEGAL SIGN-OFF</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-surface-container-lowest font-label-bold text-label-bold">ER</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">Elena Rostova (WK-2901)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Chemical Splash Neutralization</span>
+</div>
+</div>
+<span class="font-label-code text-label-code text-on-tertiary-container font-bold bg-surface-container-lowest px-1.5 py-0.5 rounded">30d Valid</span>
+</div>
+<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant pt-1">
+<span>Evaluator: Chamber ST-09</span>
+<span>Shift 04-A Validated</span>
+</div>
+</div>
+</div>
+<!-- Section: System & Spatial Configuration Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Spatial Engine Status</span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-label-code">
+<span class="text-on-surface-variant">Spatial AR Anchors</span>
+<span class="text-on-surface font-bold">18 / 18 Calibrated</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-label-code">
+<span class="text-on-surface-variant">Rule Engine Engine</span>
+<span class="text-on-tertiary-container font-bold">v3.4.2 (Production)</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-label-code">
+<span class="text-on-surface-variant">SQLite Gateway Sync</span>
+<span class="text-secondary font-bold">Port 8443 TLS 1.3</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-label-code">
+<span class="text-on-surface-variant">OSHA Threshold Standard</span>
+<span class="text-on-surface font-bold">80% Pass Mandate</span>
+</div>
+</div>
+<button class="w-full mt-space-xs py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-bold text-label-bold rounded flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Open Spatial Calibration Suite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- SECTION 4: DETAILED OSHA ASSESSMENT EVALUATIONS TABLE (Full Width) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment_turned_in</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Recent Training Sessions &amp; Rule Check Evaluations</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct feed from Field Headsets, AR Chamber Sensors, and Offline SQLite synchronizations</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm font-label-code text-label-code">
+<span class="text-on-surface-variant">Filter:</span>
+<button class="px-2.5 py-1 rounded bg-primary-container text-surface-container-lowest font-bold">All Stations</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">Chamber ST-09</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">Offline Buffers</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">Retests Only</button>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-title-eyebrow text-title-eyebrow uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Worker ID &amp; Name</th>
+<th class="py-3 px-space-md">AR Station / Rig</th>
+<th class="py-3 px-space-md">Scenario Module</th>
+<th class="py-3 px-space-md">Spatial Score</th>
+<th class="py-3 px-space-md">Rule Checks</th>
+<th class="py-3 px-space-md">Telemetry State</th>
+<th class="py-3 px-space-md">Outcome</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-md text-body-md text-on-surface">
+<!-- Row 1: Mark Daniels (WK-4092) - MATCHING MOBILE CARD -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center font-bold text-body-sm">
+                  MD
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Mark Daniels</span>
+<span class="font-label-code text-label-code text-on-surface-variant">WK-4092</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">view_in_ar</span>
+<span>Chamber ST-09</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Confined Safety</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Gas Leak &amp; Confined Space</span>
+<span class="font-label-code text-[11px] text-on-surface-variant">OSHA-1910 Spatial Protocol</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-metric-dial text-[18px] font-bold text-on-surface">85</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/100</span>
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-code text-label-code font-bold text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-1 rounded">
+                4 of 5 Passed
+              </span>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex flex-col">
+<span class="text-on-secondary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">cloud_off</span> OFFLINE BUFFERED
+                </span>
+<span class="text-on-surface-variant text-[11px]">#REC-9844-OF</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-pill-tag text-pill-tag bg-on-tertiary-container text-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1 w-fit font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> PASS
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-code text-label-code transition-colors inline-flex items-center gap-1" onclick="toggleModal('modal-record-mark')">
+<span>Inspect</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Sarah Chen (WK-3810) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/20">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center font-bold text-body-sm">
+                  SC
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Sarah Chen</span>
+<span class="font-label-code text-label-code text-on-surface-variant">WK-3810</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">view_in_ar</span>
+<span>Rig West-02</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Suppression Pod</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Fire &amp; Explosion Response</span>
+<span class="font-label-code text-[11px] text-on-surface-variant">Chamber ST-09 Protocol</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-metric-dial text-[18px] font-bold text-on-surface">92</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/100</span>
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-code text-label-code font-bold text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-1 rounded">
+                5 of 5 Passed
+              </span>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex flex-col">
+<span class="text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">cloud_done</span> ONLINE SYNCED
+                </span>
+<span class="text-on-surface-variant text-[11px]">#REC-9843-ON</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-pill-tag text-pill-tag bg-on-tertiary-container text-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1 w-fit font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> PASS
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-code text-label-code transition-colors inline-flex items-center gap-1">
+<span>Inspect</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: David Miller (WK-5124) - Failed / Retest -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-error-container flex items-center justify-center font-bold text-body-sm">
+                  DM
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">David Miller</span>
+<span class="font-label-code text-label-code text-on-surface-variant">WK-5124</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">view_in_ar</span>
+<span>Chamber ST-04</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">SCBA Tunnel</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">SCBA Standoff Protocol</span>
+<span class="font-label-code text-[11px] text-on-surface-variant">Clearance Breach &lt; 1.5m</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-metric-dial text-[18px] font-bold text-error">72</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/100</span>
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-code text-label-code font-bold text-error bg-error-container/40 px-2 py-1 rounded">
+                3 of 5 Passed
+              </span>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex flex-col">
+<span class="text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">cloud_done</span> ONLINE SYNCED
+                </span>
+<span class="text-on-surface-variant text-[11px]">#REC-9842-ON</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-pill-tag text-pill-tag bg-surface-container-high text-on-secondary-container px-2.5 py-1 rounded-full flex items-center gap-1 w-fit font-bold">
+<span class="material-symbols-outlined text-[13px]">replay</span> RETEST REQUIRED
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-code text-label-code transition-colors inline-flex items-center gap-1">
+<span>Inspect</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Elena Rostova (WK-2901) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/20">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center font-bold text-body-sm">
+                  ER
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Elena Rostova</span>
+<span class="font-label-code text-label-code text-on-surface-variant">WK-2901</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">view_in_ar</span>
+<span>Chamber ST-09</span>
+</div>
+<span class="text-on-surface-variant text-[11px]">Splash Zone AR</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Chemical Neutralization</span>
+<span class="font-label-code text-[11px] text-on-surface-variant">Caustic Splash Zone Protocol</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<span class="font-metric-dial text-[18px] font-bold text-on-surface">88</span>
+<span class="font-label-code text-label-code text-on-surface-variant">/100</span>
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-code text-label-code font-bold text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-1 rounded">
+                5 of 5 Passed
+              </span>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="flex flex-col">
+<span class="text-on-secondary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">cloud_off</span> OFFLINE BUFFERED
+                </span>
+<span class="text-on-surface-variant text-[11px]">#REC-9840-OF</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-pill-tag text-pill-tag bg-on-tertiary-container text-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1 w-fit font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> PASS
+              </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-code text-label-code transition-colors inline-flex items-center gap-1">
+<span>Inspect</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination / Footer -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low/40 -mx-space-lg -mb-space-lg px-space-lg py-space-sm rounded-b-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-label-code text-label-code text-on-surface-variant">Showing 4 of 1,284 records • Automatic zero-latency SQLite sync active</span>
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<button class="px-space-sm py-1 bg-surface-container-lowest rounded text-on-surface shadow-sm">Previous</button>
+<span class="px-2 font-bold text-on-surface">1</span>
+<button class="px-space-sm py-1 bg-surface-container-lowest rounded text-on-surface shadow-sm">Next</button>
+</div>
+</div>
+</div>
+<!-- INSPECTION MODAL DRAWER: ADAPTING THE EXACT MOBILE RECORD BREAKDOWN -->
+<div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="modal-record-mark">
+<div class="bg-surface-container-lowest w-full max-w-xl rounded-xl shadow-xl overflow-hidden flex flex-col max-h-[921px]">
+<!-- Header -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary-container text-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Inspection: Mark Daniels (WK-4092)</span>
+<span class="font-label-code text-label-code text-secondary font-bold">RECORD #REC-9844-OF (SQLite Synced)</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="toggleModal('modal-record-mark')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Content -->
+<div class="p-space-lg overflow-y-auto flex flex-col gap-space-md">
+<!-- Radial Metric Banner from mobile -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant uppercase">STANDARD METRIC</span>
+<span class="font-headline-md text-headline-md text-on-surface">Gas Leak &amp; Confined Space</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Industrial OSHA-1910 Spatial Protocol</span>
+</div>
+<div class="relative w-20 h-20 flex items-center justify-center shrink-0">
+<svg class="w-20 h-20 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">85</span>
+<span class="font-title-eyebrow text-title-eyebrow text-on-surface-variant">/100</span>
+</div>
+</div>
+</div>
+<!-- Rule Checks Checklist (Direct from mobile screenshot) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-bold text-label-bold text-on-surface uppercase">RULE CHECKS (4 OF 5 PASSED)</span>
+<span class="font-pill-tag text-pill-tag text-on-tertiary-container font-bold">80% MINIMUM MET</span>
+</div>
+<!-- Rule 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-on-tertiary-container text-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">Hazard Identification</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Detected methane pocket within 8.2s</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-1 rounded font-bold">25/25</span>
+</div>
+<!-- Rule 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-on-tertiary-container text-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">SCBA Standoff Protocol</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Maintained 1.5m clearance distance</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-1 rounded font-bold">25/25</span>
+</div>
+<!-- Rule 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-on-tertiary-container text-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">Exhaust Flap Actuation</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Manual override triggered within 5s window</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-tertiary-fixed/40 text-on-tertiary-container px-2 py-1 rounded font-bold">20/25</span>
+</div>
+<!-- Rule 4 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-label-bold text-on-surface">Tagout Latch Securing</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Slight physical delay during valve lock</span>
+</div>
+</div>
+<span class="font-pill-tag text-pill-tag bg-surface-container text-on-surface-variant px-2 py-1 rounded font-bold">15/25</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant">Validated by OSHA Automated AnchorST-09</span>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 bg-surface-container-lowest rounded font-label-bold text-label-bold text-on-surface" onclick="toggleModal('modal-record-mark')">Close</button>
+<button class="px-space-md py-1.5 bg-primary-container text-surface-container-lowest rounded font-label-bold text-label-bold">Print Shift Pass</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive modal controller
+  function toggleModal(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.toggle('hidden');
+    }
+  }
+
+  // Interactive Pipeline Simulation State Switcher (matching mobile mock trigger)
+  const syncBtn = document.getElementById('btn-syncing');
+  const successBtn = document.getElementById('btn-success');
+  const pendingBtn = document.getElementById('btn-pending');
+
+  if (syncBtn && successBtn && pendingBtn) {
+    const buttons = [syncBtn, successBtn, pendingBtn];
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('bg-secondary/10', 'text-secondary', 'bg-tertiary-fixed/30', 'text-on-tertiary-container', 'bg-surface-variant');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.remove('text-on-surface-variant');
+        btn.classList.add('bg-secondary/10', 'text-secondary');
+      });
+    });
+  }
+</script></main></div></body></html>
