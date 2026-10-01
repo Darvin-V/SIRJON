@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'inverse-on-surface': '#eef0ff', 'secondary-fixed-dim': '#ffb95f', 'on-error-container': '#93000a', 'on-secondary-container': '#684000', 'on-secondary': '#ffffff', 'primary-container': '#007bb9', 'error-container': '#ffdad6', 'on-error': '#ffffff', 'outline': '#707881', 'on-surface-variant': '#3f4850', 'surface-container-high': '#e2e7ff', 'on-tertiary-fixed-variant': '#005236', 'on-primary-container': '#fdfcff', 'on-primary-fixed-variant': '#004b73', 'secondary-fixed': '#ffddb8', 'tertiary-fixed': '#6ffbbe', 'tertiary-container': '#00855b', 'on-tertiary-fixed': '#002113', 'on-secondary-fixed': '#2a1700', 'background': '#faf8ff', 'surface-container-highest': '#dae2fd', 'surface-container-lowest': '#ffffff', 'surface-bright': '#faf8ff', 'inverse-primary': '#93ccff', 'primary-fixed': '#cce5ff', 'on-secondary-fixed-variant': '#653e00', 'primary-fixed-dim': '#93ccff', 'inverse-surface': '#283044', 'on-primary': '#ffffff', 'on-tertiary-container': '#f5fff6', 'outline-variant': '#bfc7d2', 'surface': '#faf8ff', 'surface-container-low': '#f2f3ff', 'error': '#ba1a1a', 'surface-dim': '#d2d9f4', 'secondary': '#855300', 'surface-variant': '#dae2fd', 'on-background': '#131b2e', 'on-tertiary': '#ffffff', 'tertiary': '#006947', 'surface-container': '#eaedff', 'surface-tint': '#006398', 'on-primary-fixed': '#001d31', 'tertiary-fixed-dim': '#4edea3', 'secondary-container': '#fea619', 'primary': '#006194', 'on-surface': '#131b2e' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'gutter-desktop': '2rem', 'space-xl': '2.5rem', 'margin-tablet': '1.5rem', 'margin-desktop': '3rem', 'space-xs': '0.25rem', 'gutter': '1rem', 'margin': '1rem', 'gutter-tablet': '1.5rem', 'space-md': '1rem' }, fontFamily: { 'headline-lg': ['Plus Jakarta Sans'], 'label-md': ['Inter'], 'body-sm': ['Inter'], 'label-sm': ['Inter'], 'display-lg': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'body-md': ['Inter'], 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'headline-md': ['Plus Jakarta Sans'] }, fontSize: { 'headline-lg': ['28px', { lineHeight: '36px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'body-sm': ['13px', { lineHeight: '18px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-sm': ['18px', { lineHeight: '24px', fontWeight: '600' }], 'display-lg-mobile': ['30px', { lineHeight: '38px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-12 h-12 flex items-center justify-center text-on-surface hover:text-primary active:scale-95 transition-transform" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Ar Safe Assessment Results   Fire &amp; Explosion</h1><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Assessment Evaluation</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide shadow-sm"><span class="material-symbols-outlined text-[14px] text-secondary">cloud_off</span><span>OFFLINE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Interactive State Simulation Bar (Convenient testing switcher) -->
+<section class="px-space-md pt-space-sm pb-space-xs">
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">network_ping</span>
+          Simulate Sync Pipeline
+        </span>
+<span class="font-label-sm text-label-sm text-outline font-normal">Tap to demo states</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="h-10 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm active:scale-95 transition-all flex items-center justify-center gap-1" id="btn-state-syncing" onclick="setSyncState('syncing')">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+          Syncing
+        </button>
+<button class="h-10 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm active:scale-95 transition-all flex items-center justify-center gap-1" id="btn-state-success" onclick="setSyncState('success')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+          Success
+        </button>
+<button class="h-10 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm active:scale-95 transition-all flex items-center justify-center gap-1" id="btn-state-failed" onclick="setSyncState('failed')">
+<span class="material-symbols-outlined text-[16px] text-error">cloud_sync</span>
+          Pending
+        </button>
+</div>
+</div>
+</section>
+<!-- 1. Offline Certification Banner Hero -->
+<section class="px-space-md py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-sm">
+<!-- Top Accent Stripe -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-container"></div>
+<div class="flex items-start gap-space-sm pt-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-snug tracking-tight">
+              TRAINING COMPLETED OFFLINE
+            </span>
+</div>
+<div class="flex items-center gap-1 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">
+              Result Saved Locally (SQLite Encrypted Record #REC-9844-OF)
+            </span>
+</div>
+</div>
+</div>
+<!-- Legal Reassurance Message Box -->
+<div class="bg-secondary-fixed/30 rounded-lg p-space-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">shield_with_heart</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container leading-relaxed">
+<strong>Will Sync Automatically</strong> when internet connection becomes available. 
+          <span class="font-semibold text-on-surface">Do NOT repeat training</span> — this completion is legally certified for your active shift today.
+        </p>
+</div>
+</div>
+</section>
+<!-- 2. Dynamic Sync Transition State Card -->
+<section class="px-space-md py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<!-- STATE A: Syncing / Reconnecting -->
+<div class="flex flex-col gap-space-sm" id="sync-state-syncing">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary animate-spin">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Syncing Training Results...</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Re-establishing handshake with central node</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed/50 px-2 py-0.5 rounded-full font-bold">
+            65%
+          </span>
+</div>
+<!-- Animated Progress Meter -->
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden relative">
+<div class="bg-primary h-full rounded-full transition-all duration-700 ease-out" style="width: 65%;"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">swap_vert</span>
+            Package #REC-9844-OF
+          </span>
+<span>412 KB / 634 KB</span>
+</div>
+</div>
+<!-- STATE B: Success / Central Confirmed -->
+<div class="hidden flex-col gap-space-sm" id="sync-state-success">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-1 text-tertiary">
+                Training Result Synced
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                VERIFIED
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Central Registry Confirmed: <span class="font-semibold text-on-surface">TX-2024-9104-OK</span>
+</p>
+<div class="font-label-sm text-label-sm text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+              Direct ledger receipt acknowledged at 14:38:02
+            </div>
+</div>
+</div>
+</div>
+<!-- STATE C: Sync Pending / Failed Re-attempt -->
+<div class="hidden flex-col gap-space-sm" id="sync-state-failed">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">cloud_off</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">
+                Sync Pending • Try Again Later
+              </div>
+<div class="font-body-sm text-body-sm text-secondary font-medium mt-0.5">
+                Local record valid &amp; protected
+              </div>
+</div>
+</div>
+<button class="h-10 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md active:scale-95 transition-transform flex items-center gap-1 shrink-0" onclick="simulateRetry()">
+<span class="material-symbols-outlined text-[16px]" id="retry-icon">replay</span>
+            Retry Now
+          </button>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-outline">wifi_off</span>
+<span>No relay signal detected in Chamber ST-09. Queue auto-triggers on tunnel egress.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Assessment Score & Rubric Breakdown -->
+<section class="px-space-md py-space-xs flex flex-col gap-space-sm">
+<!-- Score Hero Bento Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Worker & Session Context -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">engineering</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Mark Daniels <span class="text-outline font-normal">(WK-4092)</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">meeting_room</span>
+              Chamber ST-09 • Confined Safety
+            </span>
+</div>
+</div>
+<div class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-bold tracking-wide uppercase shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          PASS
+        </div>
+</div>
+<!-- Score Ring & Title Block -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-bold">Standard Metric</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">Gas Leak &amp; Confined Space</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Industrial OSHA-1910 Spatial Protocol</span>
+</div>
+<!-- Score Circular Gauge SVG -->
+<div class="relative w-24 h-24 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 80 80">
+<circle class="text-surface-container" cx="40" cy="40" fill="transparent" r="32" stroke="currentColor" stroke-width="7"></circle>
+<circle class="text-tertiary" cx="40" cy="40" fill="transparent" r="32" stroke="currentColor" stroke-dasharray="201.06" stroke-dashoffset="30.15" stroke-linecap="round" stroke-width="7"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface leading-none font-bold">85</span>
+<span class="font-label-sm text-label-sm text-outline">/100</span>
+</div>
+</div>
+</div>
+<!-- Rubric Breakdown Checks (4/5 passed) -->
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">
+            Rule Checks (4 of 5 Passed)
+          </span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">80% Minimum Met</span>
+</div>
+<!-- Rubric Item 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Hazard Identification</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Detected methane pocket within 8.2s</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">25/25</span>
+</div>
+<!-- Rubric Item 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">SCBA Standoff Protocol</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Maintained 1.5m clearance distance</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">25/25</span>
+</div>
+<!-- Rubric Item 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Purge System Activation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Proper valve sequential lockout executed</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">20/20</span>
+</div>
+<!-- Rubric Item 4 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Safe Egress Corridor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Navigated illuminated hazard exit line</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">15/15</span>
+</div>
+<!-- Rubric Item 5 (Advisory Deducted) -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">warning</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Acoustic Seal Recheck</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hatch secondary latch verified slowly (-15)</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">0/15</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Industrial Evidence Card with Image Placeholders -->
+<section class="px-space-md py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">Spatial Telemetry Logs</span>
+<span class="font-label-sm text-label-sm text-outline">Augmented Reality HUD Archive</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Industrial spatial AR thermal camera view inside a reinforced industrial pipe chamber showing high contrast cyan spatial reticle aligned over an air valve with hazard telemetry overlays in yellow and soft green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-iYqgUydiPPqeF7eX4sCVRQ8XvITIkKWB00WgTVW1oVQj0FBuxQe7gnTipeabF_H9KkhcN0_bDt7rRCaOBzsJe-jBXB6VU3KTwboabhMxRmZss9WGmJnzDmpTybyoaZDeEcU7domwqbkew-Hjt2OsBSJEpfgUqrbNp6HKktYUv7-CsxQkY5kJk6ftN8cMNt9Ly2Gxjux1vVm1PvbEKB0XYdu9c5cPr881ph5lGAc"/>
+<div class="absolute bottom-1 left-1.5 px-1.5 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-label-sm text-label-sm">
+            Reticle Lock: Valve A
+          </div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="First-person field worker view wearing protective safety gloves pointing hand scanner at gas monitor display in underground industrial utility shaft with clear LED indicators and pipe infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTFa3vsjsqjLJi2qc8AK6_6Wnen5pPxnmsHRNZT2eE95Y6NVQAcgW8OAZGpXY2U1M4FxqcCq5xX-9lYSCZjU_GOXr8Fd2mAYMTj9qIj2ABQ00do4D9rXQrOKFRk47ykTBJHY6S-RjZybhXPZuKzAwHPTST0XneQirIjPRNcYJOlSRFHGOwYNvlo7zNdzKdfBlDGVx_7Ng_oTgZILEQ8VY14MaHBkGs9Q9PwQL5OBY"/>
+<div class="absolute bottom-1 left-1.5 px-1.5 py-0.5 rounded bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-label-sm text-label-sm">
+            SCBA Sensor Stamp
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Primary Touch Ergonomic Actions -->
+<section class="px-space-md pt-space-sm pb-space-lg flex flex-col gap-space-sm mt-1">
+<!-- View Offline Certificate Button (52px ergonomic height) -->
+<button class="w-full h-[52px] rounded-xl bg-primary text-on-primary font-label-lg text-label-lg active:scale-[0.98] transition-all shadow-md flex items-center justify-center gap-2" onclick="openOfflineCertModal()">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+      View Offline Certificate
+    </button>
+<!-- Return to Training Hub Button -->
+<button class="w-full h-[52px] rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant font-label-lg text-label-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2" onclick="history.back()">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+      Return to Training Hub
+    </button>
+</section>
+<!-- Interactive Modal: Offline Certificate Inspection Sheet -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end justify-center" id="cert-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg shadow-xl flex flex-col gap-space-md animate-in slide-in-from-bottom duration-300">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Shift Compliance Certificate</h3>
+<span class="font-label-sm text-label-sm text-outline">Offline Cryptographic Pass</span>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90 transition-transform" onclick="closeOfflineCertModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm font-label-md text-label-md">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Worker Name:</span>
+<span class="text-on-surface font-bold">Mark Daniels (WK-4092)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Site Location:</span>
+<span class="text-on-surface font-semibold">Chamber ST-09, Level B</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Local Hash:</span>
+<span class="font-mono text-[11px] text-secondary">SHA256:7f9a88bc3e120...</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Legal Validity:</span>
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+            Valid Until Shift Close (22:00)
+          </span>
+</div>
+</div>
+<div class="flex gap-space-sm pt-2">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg active:scale-95 transition-transform flex items-center justify-center gap-2" onclick="closeOfflineCertModal()">
+<span class="material-symbols-outlined text-[18px]">done</span>
+          Dismiss &amp; Keep Ready
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function setSyncState(state) {
+      const stateSyncing = document.getElementById('sync-state-syncing');
+      const stateSuccess = document.getElementById('sync-state-success');
+      const stateFailed = document.getElementById('sync-state-failed');
+
+      const btnSyncing = document.getElementById('btn-state-syncing');
+      const btnSuccess = document.getElementById('btn-state-success');
+      const btnFailed = document.getElementById('btn-state-failed');
+
+      // Hide all states
+      stateSyncing.classList.add('hidden');
+      stateSyncing.classList.remove('flex');
+      stateSuccess.classList.add('hidden');
+      stateSuccess.classList.remove('flex');
+      stateFailed.classList.add('hidden');
+      stateFailed.classList.remove('flex');
+
+      // Reset button styles
+      [btnSyncing, btnSuccess, btnFailed].forEach(b => {
+        b.className = 'h-10 rounded-lg bg-surface text-on-surface-variant font-label-sm text-label-sm active:scale-95 transition-all flex items-center justify-center gap-1';
+      });
+
+      if (state === 'syncing') {
+        stateSyncing.classList.remove('hidden');
+        stateSyncing.classList.add('flex');
+        btnSyncing.className = 'h-10 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold active:scale-95 transition-all flex items-center justify-center gap-1';
+      } else if (state === 'success') {
+        stateSuccess.classList.remove('hidden');
+        stateSuccess.classList.add('flex');
+        btnSuccess.className = 'h-10 rounded-lg bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold active:scale-95 transition-all flex items-center justify-center gap-1';
+      } else if (state === 'failed') {
+        stateFailed.classList.remove('hidden');
+        stateFailed.classList.add('flex');
+        btnFailed.className = 'h-10 rounded-lg bg-surface-container-high text-error font-label-sm text-label-sm font-bold active:scale-95 transition-all flex items-center justify-center gap-1';
+      }
+    }
+
+    function simulateRetry() {
+      const icon = document.getElementById('retry-icon');
+      if(icon) icon.classList.add('animate-spin');
+      setTimeout(() => {
+        if(icon) icon.classList.remove('animate-spin');
+        setSyncState('syncing');
+      }, 700);
+    }
+
+    function openOfflineCertModal() {
+      const modal = document.getElementById('cert-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeOfflineCertModal() {
+      const modal = document.getElementById('cert-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+</div></main></body></html>

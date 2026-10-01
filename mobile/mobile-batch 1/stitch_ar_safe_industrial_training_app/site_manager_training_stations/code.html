@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#faf8ff", "surface": "#faf8ff", "inverse-primary": "#93ccff", "on-primary-fixed-variant": "#004b73", "on-surface-variant": "#3f4850", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#653e00", "secondary": "#855300", "on-background": "#131b2e", "secondary-fixed": "#ffddb8", "on-tertiary-container": "#f5fff6", "on-primary": "#ffffff", "surface-container-highest": "#dae2fd", "secondary-fixed-dim": "#ffb95f", "on-error": "#ffffff", "primary-fixed": "#cce5ff", "on-primary-fixed": "#001d31", "error-container": "#ffdad6", "on-error-container": "#93000a", "secondary-container": "#fea619", "outline": "#707881", "outline-variant": "#bfc7d2", "tertiary-fixed-dim": "#4edea3", "primary-fixed-dim": "#93ccff", "on-secondary-container": "#684000", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#fdfcff", "surface-bright": "#faf8ff", "inverse-on-surface": "#eef0ff", "on-tertiary-fixed": "#002113", "on-tertiary": "#ffffff", "surface-container": "#eaedff", "surface-dim": "#d2d9f4", "inverse-surface": "#283044", "surface-variant": "#dae2fd", "tertiary-container": "#00855b", "tertiary": "#006947", "on-secondary-fixed": "#2a1700", "primary-container": "#007bb9", "surface-container-low": "#f2f3ff", "on-secondary": "#ffffff", "primary": "#006194", "on-surface": "#131b2e", "surface-tint": "#006398", "surface-container-high": "#e2e7ff", "on-tertiary-fixed-variant": "#005236", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-tablet": "1.5rem", "gutter": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "3rem", "space-md": "1rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-lg": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base { html, body { min-height: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Navigate Back" class="w-14 h-14 rounded-lg flex items-center justify-center text-on-surface active:bg-surface-container transition-colors flex-shrink-0" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Brand logo. - Primary color: #ff8c00
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9drHpJRYNm3oLoD3zR19rkvfP4B9tciJpR5ZDSeyNoYnN5l5zMFRngcHwXpz3WeTXu4-UhKixIgaO_mfDh1nKfZ6dL3tw4eyiQkOjNaT6n1Y3XpdXUgPFMSBjEWPlenO7lFiPIyFc4RxO9uvNZIR_f1G50pid2FQ5OABZIHOi5IkbtlV5_ZtT1nZ7bunxeMgTGNdoBqv-qHdLJdkzak0CJ31vxS4AugmnYVlaWA5e"/><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline-block">AR-SAFE</span></div><div class="flex flex-col min-w-0 pl-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Zone Config / SQLite</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Station Setup</h1></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden xs:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">SYNCED</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1VDsTtPD9nfkPEZivkQxBmdaS5MCiz7sZEGFrKp5crYjNqV0-CSPC0mN5kXtQqHfvE8ey2fmIKi8EAdHrvvVw5_taUvRvFatPtDaT4wE8vlpdDe6YSKB00gxw8JQhzmpfBPIW4sWy4_dexTpPWqPf1OfWp9ZcgWSyBzSbfp4JRl5Z-4idHGyAC54SvDN4H5rqvPHt2dVE7qiC5FWJn2Ic_Yjmng4LNaZb8pIp-yLmV1"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-safe bg-background px-margin"><div class="flex flex-col w-full pb-24 space-y-space-md">
+<!-- Top Context Header & Breadcrumb Info -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Site Manager Home</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Training Stations</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider font-semibold">SECTOR 4</span>
+</div>
+</div>
+<!-- Search and Quick Filter Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</div>
+<input class="w-full h-13 pl-11 pr-11 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 shadow-sm focus:outline-none focus:bg-surface-container-lowest" placeholder="Filter station ID, asset tag, or hazard module..." type="text"/>
+<button aria-label="Open Filter Drawer" class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant active:text-primary" type="button">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+</button>
+</div>
+<!-- Filter Pills (Scrollable Row) -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar -mx-margin px-margin py-0.5">
+<button class="px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm font-semibold flex items-center gap-1.5">
+<span>All Stations</span>
+<span class="px-1.5 py-0.2 text-[10px] rounded-full bg-on-primary/20 text-on-primary">12</span>
+</button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap active:bg-surface-container-highest flex items-center gap-1.5">
+<span>Configured</span>
+<span class="px-1.5 py-0.2 text-[10px] rounded-full bg-surface-container-highest text-on-surface font-semibold">9</span>
+</button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap active:bg-surface-container-highest flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Pending Calibration</span>
+<span class="px-1.5 py-0.2 text-[10px] rounded-full bg-surface-container-highest text-on-surface font-semibold">2</span>
+</button>
+<button class="px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap active:bg-surface-container-highest flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Requires Update</span>
+<span class="px-1.5 py-0.2 text-[10px] rounded-full bg-surface-container-highest text-on-surface font-semibold">1</span>
+</button>
+</div>
+<!-- Station List Cards -->
+<div class="flex flex-col space-y-space-md">
+<!-- Card 1: Conveyor Safety Station 01 (Hero demonstration) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Visual Thumbnail & AR Status Pill -->
+<div class="relative h-44 w-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Industrial conveyor belt line inside mining extraction plant, featuring safety pull-cord cable, heavy drive motor, yellow protective safety fence guards, and a physical AR QR code calibration signpost in bright industrial factory lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMM8C0t4egvlKDEZyP8OhEuNywu_DCT48cpvfhK2zpklITViLnafvC1qf9AF3Kua3eI8MIjMe-zhwjvdK_0di_x6apkOFmITC3NuQH3XS1X1hMJWAySh7CdLaEMLivx7Kon-jZ3WBY4Hv11fgIRyiTP0kLMQN6GEpqEfzeS_6_GDKu0rZc9rUE2eNclYsOq52M2t86ZyOQcdA_s-h_9UISYp_hLJL9ksj-vEZ5vuA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<!-- Status Badge Top Right -->
+<div class="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container shadow-md">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Configured</span>
+</div>
+<!-- QR Calibration Tag Overlaid Bottom Left -->
+<div class="absolute bottom-3 left-3 flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-surface/90 backdrop-blur-md text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code_2</span>
+<span class="font-label-sm text-label-sm tracking-mono uppercase font-semibold">TAG: QR-784-MN</span>
+</div>
+<!-- Quick Sync Chip Overlaid Bottom Right -->
+<div class="absolute bottom-3 right-3 flex items-center gap-1 px-2 py-1 rounded-md bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">storage</span>
+<span>SQLite Synced • Cloud v2.1</span>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Mining Training Area A • Bay ST-04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Conveyor Safety Station 01</h2>
+</div>
+<button aria-label="Station Options" class="w-10 h-10 -mr-2 rounded-lg flex items-center justify-center text-on-surface-variant active:bg-surface-container" type="button">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Module Badge & Target Info -->
+<div class="flex items-center gap-2 pt-0.5">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+<span class="font-label-md text-label-md font-medium">Fire &amp; Explosion Response</span>
+</div>
+</div>
+<!-- Physical Elements Mapped List -->
+<div class="bg-surface-container-low rounded-lg p-3 space-y-1.5">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">3 AR Anchor Points Mapped</span>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">98.4% Precision</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs">Conveyor 4B Drive</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs">Emergency Pull-Cord</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs">Dry Chem Rig #04</span>
+</div>
+</div>
+<!-- Meta Footprint -->
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">event_available</span>
+<span class="font-body-sm text-body-sm">Oct 14, 2024 by S. Jenkins</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">32 Trainees Verified</span>
+</div>
+<!-- CTA Action Buttons -->
+<div class="grid grid-cols-5 gap-2 pt-2">
+<button class="col-span-2 h-12 rounded-lg bg-surface-container-high active:bg-surface-container-highest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+<span>Re-scan QR</span>
+</button>
+<button class="col-span-3 h-12 rounded-lg bg-primary text-on-primary active:bg-primary-container font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-95 font-semibold" type="button">
+<span>Configure AR Scenario</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Gas Extraction Chamber 09 (Amber Warning / Calibration Needed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Underground Vent Shaft B</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+                Needs Calibration
+              </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Gas Extraction Chamber 09</h2>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">airwave</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-error">masks</span>
+<span class="font-label-md text-label-md font-medium">Gas Leak &amp; Confined Space</span>
+</div>
+</div>
+<!-- Calibration Alert Banner -->
+<div class="bg-secondary-fixed/30 rounded-lg p-3 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">report_problem</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-secondary-fixed-variant font-bold">Drift Exceeded Tolerance (&gt;15cm)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Spatial anchors need physical recalibration using optical marker QR-09-VNT.</span>
+</div>
+</div>
+<!-- Sync and History Details -->
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync_problem</span>
+<span class="font-body-sm text-body-sm font-medium text-secondary">Local Pending Sync</span>
+</div>
+<span class="font-body-sm text-body-sm">Sep 28, 2024</span>
+</div>
+<!-- Setup Station Trigger Button -->
+<div class="pt-2">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary-container active:bg-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm font-semibold transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+<span>Setup &amp; Calibrate Station</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Crusher Infeed Hopper 03 (Configured) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Secondary Processing Unit</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Configured
+              </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Crusher Infeed Hopper 03</h2>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">lock_reset</span>
+<span class="font-label-md text-label-md font-medium">Lockout / Tagout (LOTO)</span>
+</div>
+</div>
+<!-- Sync and History Details -->
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span>
+<span class="font-body-sm text-body-sm">SQLite Synced • v1.9</span>
+</div>
+<span class="font-body-sm text-body-sm">Oct 02, 2024</span>
+</div>
+<!-- Action Area -->
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="h-12 rounded-lg bg-surface-container-high active:bg-surface-container-highest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+<span>View AR Map</span>
+</button>
+<button class="h-12 rounded-lg bg-primary text-on-primary active:bg-primary-container font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm font-semibold transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_road</span>
+<span>Manage Steps</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Chemical Dosing Skid 02 (Draft Uncalibrated) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col opacity-90">
+<div class="p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Acid Treatment Room</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">hourglass_empty</span>
+                Draft Uncalibrated
+              </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Chemical Dosing Skid 02</h2>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">science</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-error">science</span>
+<span class="font-label-md text-label-md font-medium">Chemical Splash &amp; Neutralization</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<span class="font-body-sm text-body-sm italic">Never mapped physically</span>
+<span class="font-body-sm text-body-sm">Created Yesterday</span>
+</div>
+<!-- Setup Trigger -->
+<div class="pt-2">
+<button class="w-full h-12 rounded-lg bg-surface-container-high active:bg-surface-container-highest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 font-semibold transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">add_location_alt</span>
+<span>Initiate First Spatial Scan</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Industrial Level-4 Security & Offline SQLite Notice -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-start gap-space-sm shadow-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<div class="flex flex-col space-y-1 min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Level 4 Plant Floor Enforcement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Station setup mode is restricted to Level 4 Safety Directors physically present on the plant floor. Configurations automatically sync to the local SQLite offline cache instantly.
+      </p>
+</div>
+</div>
+<!-- Floating Sticky Action Trigger (Bottom) -->
+<div class="fixed bottom-4 inset-x-margin max-w-lg mx-auto z-40">
+<button class="w-full h-14 rounded-xl bg-primary text-on-primary shadow-xl flex items-center justify-center gap-2.5 font-label-lg text-label-lg font-bold tracking-wide active:scale-98 transition-transform" onclick="showScanModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">qr_code_scanner</span>
+<span>Register New Physical Station QR</span>
+</button>
+</div>
+</div>
+<script>
+  function showScanModal() {
+    const feedbackToast = document.createElement('div');
+    feedbackToast.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md flex items-center gap-2 shadow-xl animate-bounce';
+    feedbackToast.innerHTML = `
+      <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">sensors</span>
+      <span>Launching Rugged AR Camera Reticle...</span>
+    `;
+    document.body.appendChild(feedbackToast);
+    setTimeout(() => {
+      feedbackToast.remove();
+    }, 2800);
+  }
+</script></main></body></html>

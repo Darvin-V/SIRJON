@@ -1,0 +1,29 @@
+{
+  "name": "ar-safe-mobile",
+  "version": "1.0.0",
+  "description": "AR-SAFE Industrial Smartphone Augmented Reality Safety Training Mobile Application",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host --port 5173",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "build:android": "cd android && gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@reactvision/react-viro": "2.41.6",
+    "@rollup/wasm-node": "^4.63.4",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.344.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.9"
+  },
+  "devDependencies": {
+    "@react-native/babel-preset": "^0.73.21",
+    "@react-native/metro-config": "^0.73.5",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.4"
+  }
+}

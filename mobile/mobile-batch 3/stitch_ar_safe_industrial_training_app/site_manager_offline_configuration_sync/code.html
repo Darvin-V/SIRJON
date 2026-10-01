@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'inverse-on-surface': '#eef0ff', 'secondary-fixed-dim': '#ffb95f', 'on-error-container': '#93000a', 'on-secondary-container': '#684000', 'on-secondary': '#ffffff', 'primary-container': '#007bb9', 'error-container': '#ffdad6', 'on-error': '#ffffff', 'outline': '#707881', 'on-surface-variant': '#3f4850', 'surface-container-high': '#e2e7ff', 'on-tertiary-fixed-variant': '#005236', 'on-primary-container': '#fdfcff', 'on-primary-fixed-variant': '#004b73', 'secondary-fixed': '#ffddb8', 'tertiary-fixed': '#6ffbbe', 'tertiary-container': '#00855b', 'on-tertiary-fixed': '#002113', 'on-secondary-fixed': '#2a1700', 'background': '#faf8ff', 'surface-container-highest': '#dae2fd', 'surface-container-lowest': '#ffffff', 'surface-bright': '#faf8ff', 'inverse-primary': '#93ccff', 'primary-fixed': '#cce5ff', 'on-secondary-fixed-variant': '#653e00', 'primary-fixed-dim': '#93ccff', 'inverse-surface': '#283044', 'on-primary': '#ffffff', 'on-tertiary-container': '#f5fff6', 'outline-variant': '#bfc7d2', 'surface': '#faf8ff', 'surface-container-low': '#f2f3ff', 'error': '#ba1a1a', 'surface-dim': '#d2d9f4', 'secondary': '#855300', 'surface-variant': '#dae2fd', 'on-background': '#131b2e', 'on-tertiary': '#ffffff', 'tertiary': '#006947', 'surface-container': '#eaedff', 'surface-tint': '#006398', 'on-primary-fixed': '#001d31', 'tertiary-fixed-dim': '#4edea3', 'secondary-container': '#fea619', 'primary': '#006194', 'on-surface': '#131b2e' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'gutter-desktop': '2rem', 'space-xl': '2.5rem', 'margin-tablet': '1.5rem', 'margin-desktop': '3rem', 'space-xs': '0.25rem', 'gutter': '1rem', 'margin': '1rem', 'gutter-tablet': '1.5rem', 'space-md': '1rem' }, fontFamily: { 'headline-lg': ['Plus Jakarta Sans'], 'label-md': ['Inter'], 'body-sm': ['Inter'], 'label-sm': ['Inter'], 'display-lg': ['Plus Jakarta Sans'], 'headline-sm': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Plus Jakarta Sans'], 'body-md': ['Inter'], 'label-lg': ['Inter'], 'body-lg': ['Inter'], 'headline-md': ['Plus Jakarta Sans'] }, fontSize: { 'headline-lg': ['28px', { lineHeight: '36px', letterSpacing: '-0.01em', fontWeight: '600' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'body-sm': ['13px', { lineHeight: '18px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.02em', fontWeight: '700' }], 'headline-sm': ['18px', { lineHeight: '24px', fontWeight: '600' }], 'display-lg-mobile': ['30px', { lineHeight: '38px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Back" class="w-12 h-12 flex items-center justify-center text-on-surface hover:text-primary active:scale-95 transition-transform" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Site Manager   Training Stations</h1><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Assessment Evaluation</span></div></div><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide shadow-sm"><span class="material-symbols-outlined text-[14px] text-secondary">cloud_off</span><span>OFFLINE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Content Area Wrapper with standard 16px lateral padding -->
+<div class="flex flex-col px-margin py-space-md gap-space-md">
+<!-- Top Context Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">offline_bolt</span>
+<span class="font-label-sm text-label-sm">Offline Mode • Local Station Setup</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: ST-04-CFG</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Conveyor Safety Station 01</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span class="font-body-sm text-body-sm">Bay ST-04, Sector 4 • Plant Wing B</span>
+</div>
+</div>
+<div class="mt-1 pt-space-xs flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-md bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Module</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">Fire &amp; Explosion Response</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-surface-container font-semibold">Mesh v2.4</span>
+</div>
+</div>
+<!-- Local Saved Confirmation Container -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Configuration Saved Locally</h2>
+<span class="font-label-md text-label-md text-tertiary">Zero-Latency On-Device Commit</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed bg-surface-container p-3 rounded-lg">
+        AR Coordinate Anchor <strong class="text-on-surface font-semibold font-label-md">(X: 1.42, Y: 0.88, Z: -2.31)</strong>, 3 mapped physical equipment anchors, and hazard directives saved to on-device SQLite database.
+      </p>
+<!-- P2P Mesh Reassurance Strip -->
+<div class="flex items-center gap-2 text-on-surface-variant px-1">
+<span class="material-symbols-outlined text-[18px] text-primary">sensors</span>
+<span class="font-body-sm text-body-sm">Local trainees can sync via direct BLE/Wi-Fi mesh proximity.</span>
+</div>
+</div>
+<!-- Interactive Offline-First Sync Progression Suite -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">cloud_sync</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Network Sync Controller</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dynamic Simulator</span>
+</div>
+<!-- State Tab Selectors (Industrial Selector Pill Buttons) -->
+<div class="grid grid-cols-4 gap-1 p-1 bg-surface-container-highest rounded-lg">
+<button class="py-2 px-1 rounded font-label-sm text-label-sm font-semibold transition-colors bg-primary text-on-primary text-center" id="btn-state-1" onclick="switchSyncState(1)">1. Pending</button>
+<button class="py-2 px-1 rounded font-label-sm text-label-sm font-semibold transition-colors text-on-surface-variant hover:text-on-surface text-center" id="btn-state-2" onclick="switchSyncState(2)">2. Syncing</button>
+<button class="py-2 px-1 rounded font-label-sm text-label-sm font-semibold transition-colors text-on-surface-variant hover:text-on-surface text-center" id="btn-state-3" onclick="switchSyncState(3)">3. Synced</button>
+<button class="py-2 px-1 rounded font-label-sm text-label-sm font-semibold transition-colors text-on-surface-variant hover:text-on-surface text-center" id="btn-state-4" onclick="switchSyncState(4)">4. Failed</button>
+</div>
+<!-- State 1: Active Pending -->
+<div class="sync-state-card bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs shadow-sm" id="sync-card-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">cloud_queue</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Pending Cloud Sync</span>
+<span class="font-label-sm text-label-sm text-secondary">Queue Priority: Normal</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded font-mono text-on-surface">1.4 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Ready to broadcast to trainee mobile devices upon plant network reconnect. SQLite ledger marked <span class="font-semibold text-on-surface">UNCOMMITTED_REMOTE</span>.
+        </p>
+</div>
+<!-- State 2: Active Syncing -->
+<div class="sync-state-card hidden bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs shadow-sm" id="sync-card-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Syncing Configuration...</span>
+<span class="font-label-sm text-label-sm text-primary">Uploading spatial mesh definition (1.4MB)...</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">68%</span>
+</div>
+<!-- Progress bar using clean surface tokens -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Uploading chunk 7 of 11 • 420 KB/s</span>
+</div>
+<!-- State 3: Synced Confirmation -->
+<div class="sync-state-card hidden bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs shadow-sm" id="sync-card-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">cloud_done</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Configuration Synced</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Cloud Registry v2.2 Active</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Just now</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-1 bg-surface-container p-2 rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary">hub</span>
+<span>Hash verification valid across 4 distributed warehouse nodes.</span>
+</div>
+</div>
+<!-- State 4: Sync Failed Fallback -->
+<div class="sync-state-card hidden bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm shadow-sm" id="sync-card-4">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">sync_problem</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-error">Sync Failed • Stored in SQLite Cache</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Socket timeout (504 Plant Gateway Unreachable)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-2.5 rounded text-on-surface-variant font-body-sm text-body-sm">
+<strong class="text-on-surface">Reassurance:</strong> Local workers can immediately scan station QR and train using peer SQLite mesh!
+        </div>
+<button class="w-full h-12 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 active:scale-98 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">replay</span>
+<span>Retry Upload</span>
+</button>
+</div>
+</div>
+<!-- Configured Scenario Summary (Industrial Data Bento) -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Configured Scenario Summary</h3>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">Rev 1.0</span>
+</div>
+<!-- Visual Bento Component 1: Spatial Anchor Snapshot Placeholder -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Industrial factory floor with safety line markings on polished concrete, equipment consoles with digital readouts, AR spatial anchor markers hovering in cyan light, bright high-bay LED ceiling illumination, clean technical safety aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUtOXmkQ3h6CbdpnuGMaBhCn_ZwNDF_B8hs6r1ybEet6Ownb9o6oNG2P2lx8iDL5JUMSHH4XbUjLI7WkRrpSCWsqZXIc2PV5n2SknB0LFV09zEs-S2iqDKKPBSkx5whyYWlnA36sWFPkiOZkzX5Jh8mbk68xdZ2yJmhfWi2MYmjaUEEFbQV6Asm5QCEHR2kmvF90DTxRi3TkVHNwWMWI6epTG1BkWuGgLUdutYE1Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/40 to-transparent p-space-md flex flex-col justify-end">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface tracking-wider uppercase font-semibold">Anchor Target Locked</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface">Conveyor Motor Bay 04 Spatial Map</span>
+</div>
+</div>
+<!-- Bento Grid: Hazard Perimeter & 3 Physical Anchors -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Virtual Hazard Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-error">warning</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Virtual Hazard Directives</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">High Hazard</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Class B Motor Solvent Fire</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Thermal simulation dynamic plume</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-lg text-label-lg text-error font-bold">2.5m</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">danger perimeter</span>
+</div>
+</div>
+</div>
+<!-- 3 Physical Mapped Elements -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">mobile_share_stack</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">3 Physical Elements Mapped</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Verified Spatial IDs</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Anchor 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">dangerous</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Emergency Stop (E-Stop #04)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cut-off switch solenoid anchor</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 bg-surface-container-lowest rounded font-mono">ID: ES-04</span>
+</div>
+<!-- Anchor 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">fire_extinguisher</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">10kg Dry Chemical Extinguisher</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Class A/B/C wall bracket latch</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 bg-surface-container-lowest rounded font-mono">ID: EX-11</span>
+</div>
+<!-- Anchor 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Master Control Console</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PLC status panel &amp; alarm reset</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 py-0.5 bg-surface-container-lowest rounded font-mono">ID: CC-01</span>
+</div>
+</div>
+</div>
+<!-- 5 Trainee Instructions Sequence -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">format_list_numbered</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">5 Trainee Instructions Sequence</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sequential Logic</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+<span class="font-body-sm text-body-sm text-on-surface">Identify Class B flame breach and hit physical E-Stop within 15 seconds.</span>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+<span class="font-body-sm text-body-sm text-on-surface">Maintain &gt;2.5m radiant distance perimeter demarcated by virtual safety ring.</span>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+<span class="font-body-sm text-body-sm text-on-surface">Unhook 10kg Dry Chem extinguisher from marked physical wall station.</span>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 mt-0.5">4</span>
+<span class="font-body-sm text-body-sm text-on-surface">Execute PASS discharge technique targeting virtual solvent base fire geometry.</span>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded bg-surface-container">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center shrink-0 mt-0.5">5</span>
+<span class="font-body-sm text-body-sm text-on-surface">Verify zero-voltage status readout on master control console before reset.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Visual Context: Technician AR View Preview -->
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Industrial equipment operator wearing safety gloves holding a rugged tablet computer displaying green bounding boxes around warehouse machinery, subtle depth map overlays, high visual clarity and ergonomic precision focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXdjinV0XMq63h70SgbciFzUePUyvdsigAitUDO9U_9oFTUoriKXw3Sqw4BWI5dU8E26db1Mpxfm8tr2PSK19-daxbJdb55aoEUnNJW7YpOvLGMVPYGvjwEY3_G0SBtbyin8szSBzOYt7bdJ2jzLLTNmwfTZeujoLahaUW8G3JKvhIhLQUOchy9Db8TWkAKyaR585VYszp38mMXDNqsQiQdfsJOLL3t9eUSACmVFo"/>
+<div class="absolute inset-0 bg-gradient-to-r from-inverse-surface via-inverse-surface/60 to-transparent p-space-md flex items-center justify-between">
+<div class="flex flex-col max-w-[200px]">
+<span class="font-label-sm text-label-sm text-inverse-on-surface tracking-wider uppercase font-semibold">Spatial Mesh Ready</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface">AR Reticle alignment calibrated at 99.4% spatial precision.</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[22px]">view_in_ar</span>
+</div>
+</div>
+</div>
+<!-- Primary Action Controls: Thumb Ergonomic Zone (Min 52px Touch Targets) -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Test Configuration in AR (Primary Action) -->
+<button class="w-full h-14 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-3 shadow-md active:scale-98 transition-transform">
+<span class="material-symbols-outlined text-[24px]">view_in_ar</span>
+<span>Test Configuration in AR</span>
+</button>
+<!-- Done / Return to Stations (Secondary Action) -->
+<button class="w-full h-14 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 active:scale-98 transition-transform" onclick="history.back()">
+<span class="material-symbols-outlined text-[22px] text-on-surface-variant">arrow_back</span>
+<span>Done / Return to Stations</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function switchSyncState(stateNumber) {
+    // Hide all state cards
+    const cards = document.querySelectorAll('.sync-state-card');
+    cards.forEach(card => card.classList.add('hidden'));
+
+    // Reset button styles
+    for (let i = 1; i <= 4; i++) {
+      const btn = document.getElementById('btn-state-' + i);
+      if (btn) {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('text-on-surface-variant');
+      }
+    }
+
+    // Activate current card
+    const targetCard = document.getElementById('sync-card-' + stateNumber);
+    if (targetCard) {
+      targetCard.classList.remove('hidden');
+    }
+
+    // Highlight current button
+    const targetBtn = document.getElementById('btn-state-' + stateNumber);
+    if (targetBtn) {
+      targetBtn.classList.add('bg-primary', 'text-on-primary');
+      targetBtn.classList.remove('text-on-surface-variant');
+    }
+  }
+</script></main></body></html>

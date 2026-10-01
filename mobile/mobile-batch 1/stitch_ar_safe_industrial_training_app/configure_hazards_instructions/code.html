@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#faf8ff", "surface": "#faf8ff", "inverse-primary": "#93ccff", "on-primary-fixed-variant": "#004b73", "on-surface-variant": "#3f4850", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#653e00", "secondary": "#855300", "on-background": "#131b2e", "secondary-fixed": "#ffddb8", "on-tertiary-container": "#f5fff6", "on-primary": "#ffffff", "surface-container-highest": "#dae2fd", "secondary-fixed-dim": "#ffb95f", "on-error": "#ffffff", "primary-fixed": "#cce5ff", "on-primary-fixed": "#001d31", "error-container": "#ffdad6", "on-error-container": "#93000a", "secondary-container": "#fea619", "outline": "#707881", "outline-variant": "#bfc7d2", "tertiary-fixed-dim": "#4edea3", "primary-fixed-dim": "#93ccff", "on-secondary-container": "#684000", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#fdfcff", "surface-bright": "#faf8ff", "inverse-on-surface": "#eef0ff", "on-tertiary-fixed": "#002113", "on-tertiary": "#ffffff", "surface-container": "#eaedff", "surface-dim": "#d2d9f4", "inverse-surface": "#283044", "surface-variant": "#dae2fd", "tertiary-container": "#00855b", "tertiary": "#006947", "on-secondary-fixed": "#2a1700", "primary-container": "#007bb9", "surface-container-low": "#f2f3ff", "on-secondary": "#ffffff", "primary": "#006194", "on-surface": "#131b2e", "surface-tint": "#006398", "surface-container-high": "#e2e7ff", "on-tertiary-fixed-variant": "#005236", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-tablet": "1.5rem", "gutter": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "3rem", "space-md": "1rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-lg": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base { html, body { min-height: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Navigate Back" class="w-14 h-14 rounded-lg flex items-center justify-center text-on-surface active:bg-surface-container transition-colors flex-shrink-0" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Brand logo. - Primary color: #ff8c00
+- Font: spaceGrotesk
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X9drHpJRYNm3oLoD3zR19rkvfP4B9tciJpR5ZDSeyNoYnN5l5zMFRngcHwXpz3WeTXu4-UhKixIgaO_mfDh1nKfZ6dL3tw4eyiQkOjNaT6n1Y3XpdXUgPFMSBjEWPlenO7lFiPIyFc4RxO9uvNZIR_f1G50pid2FQ5OABZIHOi5IkbtlV5_ZtT1nZ7bunxeMgTGNdoBqv-qHdLJdkzak0CJ31vxS4AugmnYVlaWA5e"/><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider hidden sm:inline-block">AR-SAFE</span></div><div class="flex flex-col min-w-0 pl-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Zone Config / SQLite</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Hazard Configuration</h1></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="hidden xs:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">SYNCED</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1VDsTtPD9nfkPEZivkQxBmdaS5MCiz7sZEGFrKp5crYjNqV0-CSPC0mN5kXtQqHfvE8ey2fmIKi8EAdHrvvVw5_taUvRvFatPtDaT4wE8vlpdDe6YSKB00gxw8JQhzmpfBPIW4sWy4_dexTpPWqPf1OfWp9ZcgWSyBzSbfp4JRl5Z-4idHGyAC54SvDN4H5rqvPHt2dVE7qiC5FWJn2Ic_Yjmng4LNaZb8pIp-yLmV1"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-safe bg-background px-margin"><div class="flex flex-col w-full pb-32">
+<!-- Top Progress & Context Meta -->
+<div class="flex flex-col gap-space-sm pt-space-md mb-space-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+        Step 2 of 4 • Element &amp; Hazard Setup
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">50% Complete</span>
+</div>
+<!-- Stepper Track Bar -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full transition-all duration-300 w-1/2"></div>
+</div>
+<!-- Station Context Pill Banner -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-high rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase tracking-wider">Spatial Assignment Target</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate leading-tight">Conveyor Safety Station 01 • Mining Area A</span>
+</div>
+</div>
+<span class="px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-sm text-label-sm font-bold rounded-full flex items-center gap-1 shadow-sm flex-shrink-0">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+        Spatial Mesh Ready
+      </span>
+</div>
+</div>
+<!-- SECTION 1: Physical Elements -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-5 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">1. Select Relevant Physical Elements</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Select physical equipment in the station view that workers will interact with or identify during the scenario.
+      </p>
+</div>
+<!-- Equipment Selection Grid -->
+<div class="flex flex-col gap-space-sm" id="equipment-list">
+<!-- Item 1: Selected -->
+<div class="equipment-card cursor-pointer flex items-center justify-between p-space-md bg-surface-container-low rounded-xl shadow-sm transition-all active:scale-[0.99] select-none" data-selected="true" onclick="toggleCard(this)">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="status-box w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[22px] check-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Conveyor Belt Bed &amp; Rollers</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-semibold">Primary Machine</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Anchor #01
+              </span>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+</div>
+</div>
+<!-- Item 2: Selected -->
+<div class="equipment-card cursor-pointer flex items-center justify-between p-space-md bg-surface-container-low rounded-xl shadow-sm transition-all active:scale-[0.99] select-none" data-selected="true" onclick="toggleCard(this)">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="status-box w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[22px] check-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Emergency E-Stop Pull-Cord</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-error-container font-label-sm text-label-sm text-on-error-container font-bold">Cutoff Trigger</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Anchor #02
+              </span>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+</div>
+</div>
+<!-- Item 3: Selected -->
+<div class="equipment-card cursor-pointer flex items-center justify-between p-space-md bg-surface-container-low rounded-xl shadow-sm transition-all active:scale-[0.99] select-none" data-selected="true" onclick="toggleCard(this)">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="status-box w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[22px] check-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Fire Extinguisher Rig (#04 Dry Chem)</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed font-label-sm text-label-sm text-on-secondary-fixed font-bold">Physical Tool</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Anchor #03
+              </span>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">fire_extinguisher</span>
+</div>
+</div>
+<!-- Item 4: Selected -->
+<div class="equipment-card cursor-pointer flex items-center justify-between p-space-md bg-surface-container-low rounded-xl shadow-sm transition-all active:scale-[0.99] select-none" data-selected="true" onclick="toggleCard(this)">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="status-box w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[22px] check-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Main Electrical Control Console</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-semibold">Isolation Switch</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span> Anchor #04
+              </span>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+</div>
+</div>
+<!-- Item 5: Unselected -->
+<div class="equipment-card cursor-pointer flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm transition-all active:scale-[0.99] opacity-75 select-none" data-selected="false" onclick="toggleCard(this)">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="status-box w-10 h-10 rounded-lg bg-surface-container text-outline-variant flex items-center justify-center flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[20px] check-icon">add</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Emergency Exit Doorway (East Wall)</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Egress Path</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standby</span>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">door_open</span>
+</div>
+</div>
+<!-- Item 6: Unselected -->
+<div class="equipment-card cursor-pointer flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm transition-all active:scale-[0.99] opacity-75 select-none" data-selected="false" onclick="toggleCard(this)">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="status-box w-10 h-10 rounded-lg bg-surface-container text-outline-variant flex items-center justify-center flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[20px] check-icon">add</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Overhead Ventilation Duct</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Environmental</span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standby</span>
+</div>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">air</span>
+</div>
+</div>
+</div>
+<!-- Custom Tag Trigger Button -->
+<button class="w-full h-12 bg-surface-container-low text-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-xs active:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Add Custom Physical Asset Tag</span>
+</button>
+</section>
+<!-- SECTION 2: Virtual Hazard Context -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-5 bg-secondary-container rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">2. Configure Virtual Hazard Context</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        The virtual hazard will be anchored to the physical equipment reference established in the previous step.
+      </p>
+</div>
+<!-- Active Hazard Card -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm font-bold rounded-md">LEVEL 3 HIGH</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">NFPA 30 COMPLIANT</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate mt-0.5">Class B Solvent / Motor Fire</h3>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md font-bold px- space-sm py-1 bg-surface-container rounded-lg active:bg-surface-container-high transition-colors" type="button">
+          Change
+        </button>
+</div>
+<!-- Anchor Target Dropdown -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container-low rounded-lg">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Spatial Anchor Target Reference</label>
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Drive Motor 4B &amp; Conveyor Junction</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Spatial Reticle Preview Visual -->
+<div class="w-full h-36 bg-inverse-surface rounded-xl overflow-hidden relative flex flex-col justify-between p-space-sm shadow-inner">
+<!-- Telemetry HUD top -->
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-inverse-surface/80 px-2 py-0.5 rounded backdrop-blur">
+            AR_ANCHOR: POS [X: 1.42, Y: 0.88, Z: -2.31]
+          </span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-inverse-surface/80 px-2 py-0.5 rounded backdrop-blur flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> LOCK 100%
+          </span>
+</div>
+<!-- Visual Reticle with Flame Representation -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<!-- Reticle Circle & Crosshairs -->
+<div class="w-24 h-24 rounded-full border border-dashed border-primary-fixed-dim/40 flex items-center justify-center relative">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-ping absolute"></div>
+<!-- Flame Center Marker -->
+<span class="material-symbols-outlined text-secondary-container text-[36px] drop-shadow-[0_0_8px_rgba(254,166,25,0.8)]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<!-- Bounding Box Corners -->
+<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-primary-fixed"></div>
+<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-primary-fixed"></div>
+<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-primary-fixed"></div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-primary-fixed"></div>
+</div>
+</div>
+<!-- Telemetry HUD bottom -->
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-inverse-on-surface bg-inverse-surface/80 px-2 py-0.5 rounded backdrop-blur">
+            HEAT EXCLUSION: 2.5m RADIUS
+          </span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface bg-inverse-surface/80 px-2 py-0.5 rounded backdrop-blur">
+            TARGET: MOTOR_4B
+          </span>
+</div>
+</div>
+<!-- Hazard Simulation Modifiers & Effects -->
+<div class="flex flex-col gap-space-sm pt-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Visual &amp; Spatial Hazard Modifiers</span>
+<!-- Effect 1: Smoke -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">cloud</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Volumetric Smoke Cloud</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Density: Medium (60% particulate opacity)</span>
+</div>
+</div>
+<!-- Tactile Switch (Active) -->
+<div class="w-12 h-7 bg-primary rounded-full relative cursor-pointer p-0.5 transition-colors flex-shrink-0" data-checked="true" onclick="toggleSwitch(this)">
+<div class="w-6 h-6 bg-on-primary rounded-full shadow-md transform translate-x-5 transition-transform"></div>
+</div>
+</div>
+<!-- Effect 2: Electrical Arc -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">bolt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sparks &amp; Electrical Arc Flare</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Origin: Drive Motor 4B Bearing Box</span>
+</div>
+</div>
+<!-- Tactile Switch (Active) -->
+<div class="w-12 h-7 bg-primary rounded-full relative cursor-pointer p-0.5 transition-colors flex-shrink-0" data-checked="true" onclick="toggleSwitch(this)">
+<div class="w-6 h-6 bg-on-primary rounded-full shadow-md transform translate-x-5 transition-transform"></div>
+</div>
+</div>
+<!-- Effect 3: Exclusion Zone -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-error text-[22px]">radio_button_checked</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Danger Exclusion Zone (2.5m Radiant Heat)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Haptic + audio boundary alert trigger</span>
+</div>
+</div>
+<!-- Tactile Switch (Active) -->
+<div class="w-12 h-7 bg-primary rounded-full relative cursor-pointer p-0.5 transition-colors flex-shrink-0" data-checked="true" onclick="toggleSwitch(this)">
+<div class="w-6 h-6 bg-on-primary rounded-full shadow-md transform translate-x-5 transition-transform"></div>
+</div>
+</div>
+<!-- Effect 4: Toxic Plume (Inactive) -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg opacity-60">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">air</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Toxic Vapor Dispersion Plume</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Requires SCBA gear simulation</span>
+</div>
+</div>
+<!-- Tactile Switch (Inactive) -->
+<div class="w-12 h-7 bg-surface-container-highest rounded-full relative cursor-pointer p-0.5 transition-colors flex-shrink-0" data-checked="false" onclick="toggleSwitch(this)">
+<div class="w-6 h-6 bg-surface-container-lowest rounded-full shadow-md transform translate-x-0 transition-transform"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Scenario Safety Instructions Sequence -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-5 bg-tertiary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">3. Scenario Safety Instructions Sequence</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Select and order the prescriptive tactical actions the trainee must execute during this scenario.
+      </p>
+</div>
+<!-- Instruction Sequence List with Drag Handles -->
+<div class="flex flex-col gap-space-sm" id="instruction-sequence">
+<!-- Step 1 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm select-none">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm flex items-center justify-center flex-shrink-0">
+            1
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Identify hazard origin &amp; assess flame class</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">AR spatial gaze verification • 3 sec hold</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+<span class="material-symbols-outlined text-[22px] cursor-grab active:cursor-grabbing text-outline">drag_indicator</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm select-none">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm flex items-center justify-center flex-shrink-0">
+            2
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Slap physical emergency conveyor E-stop pull-cord</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct physical tactile interaction • Anchor #02</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+<span class="material-symbols-outlined text-[22px] cursor-grab active:cursor-grabbing text-outline">drag_indicator</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm select-none">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm flex items-center justify-center flex-shrink-0">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Locate &amp; unpin physical 10kg Class B dry chem extinguisher</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Object detection tracking • Rig #04</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+<span class="material-symbols-outlined text-[22px] cursor-grab active:cursor-grabbing text-outline">drag_indicator</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm select-none">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm flex items-center justify-center flex-shrink-0">
+            4
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Maintain 2.5m safe standoff distance and execute PASS sweep</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cone angle &amp; nozzle sweep telemetry check</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+<span class="material-symbols-outlined text-[22px] cursor-grab active:cursor-grabbing text-outline">drag_indicator</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm select-none">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-headline-sm flex items-center justify-center flex-shrink-0">
+            5
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Verify electrical lockout and complete egress check</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">LOTO status validation • Console 04</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+<span class="material-symbols-outlined text-[22px] cursor-grab active:cursor-grabbing text-outline">drag_indicator</span>
+</div>
+</div>
+</div>
+<!-- Add Custom Directive Button -->
+<button class="w-full h-12 bg-surface-container-low text-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-space-xs active:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">playlist_add</span>
+<span>Add Custom Prescriptive Directive</span>
+</button>
+</section>
+<!-- Sticky Bottom Action Footer -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl px-margin py-space-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] pb-safe">
+<div class="flex flex-col gap-space-xs max-w-lg mx-auto w-full">
+<!-- Primary CTA Preview Button -->
+<button class="w-full h-14 bg-primary hover:bg-primary-container active:scale-[0.98] text-on-primary font-label-lg text-label-lg font-bold rounded-xl flex items-center justify-center gap-space-sm shadow-md transition-all" onclick="triggerARPreview()" type="button">
+<span class="material-symbols-outlined text-[22px]">view_in_ar</span>
+<span>Preview AR Scenario in Camera</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Secondary CTA Save Draft -->
+<div class="flex items-center justify-between px-space-xs pt-1">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-semibold py-2 px-space-sm rounded-lg active:bg-surface-container flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-saved to local SQLite 1m ago</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleCard(element) {
+    const isSelected = element.getAttribute('data-selected') === 'true';
+    const nextState = !isSelected;
+    element.setAttribute('data-selected', nextState.toString());
+    
+    const icon = element.querySelector('.check-icon');
+    const statusBox = element.querySelector('.status-box');
+
+    if (nextState) {
+      element.classList.remove('bg-surface-container-lowest', 'opacity-75');
+      element.classList.add('bg-surface-container-low');
+      statusBox.classList.remove('bg-surface-container', 'text-outline-variant');
+      statusBox.classList.add('bg-primary', 'text-on-primary');
+      icon.innerText = 'check';
+    } else {
+      element.classList.remove('bg-surface-container-low');
+      element.classList.add('bg-surface-container-lowest', 'opacity-75');
+      statusBox.classList.remove('bg-primary', 'text-on-primary');
+      statusBox.classList.add('bg-surface-container', 'text-outline-variant');
+      icon.innerText = 'add';
+    }
+  }
+
+  function toggleSwitch(element) {
+    const isChecked = element.getAttribute('data-checked') === 'true';
+    const nextState = !isChecked;
+    element.setAttribute('data-checked', nextState.toString());
+    const knob = element.firstElementChild;
+
+    if (nextState) {
+      element.classList.remove('bg-surface-container-highest');
+      element.classList.add('bg-primary');
+      knob.classList.remove('translate-x-0', 'bg-surface-container-lowest');
+      knob.classList.add('translate-x-5', 'bg-on-primary');
+    } else {
+      element.classList.remove('bg-primary');
+      element.classList.add('bg-surface-container-highest');
+      knob.classList.remove('translate-x-5', 'bg-on-primary');
+      knob.classList.add('translate-x-0', 'bg-surface-container-lowest');
+    }
+  }
+
+  function triggerARPreview() {
+    const btn = event.currentTarget;
+    const origHTML = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[22px]">sync</span><span>Initializing Spatial Anchor...</span>';
+    setTimeout(() => {
+      btn.innerHTML = origHTML;
+    }, 1200);
+  }
+</script></main></body></html>
